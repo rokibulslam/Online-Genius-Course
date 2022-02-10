@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div>
       {/* Mui-navbar package used */}
-      <MuiNavbar logo="https://i.ibb.co/N3Y9VVw/logo.png" background="#444444">
+      <MuiNavbar logo="https://i.ibb.co/N3Y9VVw/logo.png" background="#00ACD6">
         <NavItem to="/home">HOME</NavItem>
         <NavItem to="/about">ABOUT US</NavItem>
         <NavItem to="/course">OUR COURSES</NavItem>

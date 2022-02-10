@@ -1,0 +1,183 @@
+.bg {
+  background-image: url(https://i.ibb.co/0t1xkJD/download.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg::before {
+  position: absolute;
+  content: url(https://i.ibb.co/w4RcVGF/20a552ffacda1229473fa0e8bdcf1288.png);
+  right: 0;
+  top: 50px;
+  z-index: -1;
+}
+
+.banner {
+  min-height: 800px;
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.banner-area {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.banner-content1 {
+  font-size: 50px;
+  line-height: 70px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-content1 {
+    text-align: center;
+    font-size: 50px;
+    line-height: 70px;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+  .banner-content2 {
+    text-align: center;
+    font-size: 20px;
+    line-height: 32px;
+    color: #444;
+    margin-bottom: 40px;
+  }
+}
+
+.banner-content-secondary {
+  color: #00c6d1;
+}
+
+.banner-content2 {
+  font-size: 20px;
+  line-height: 32px;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+/*-------------------------------
+ banner section button design
+------------------------------- */
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #00ccd771;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #234567;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #b1dae7;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+
+/* ------------------------------
+Banner page another button design
+--------------------------------- */
+
+.cssbuttons-io-button {
+  background: #00a8d5;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
