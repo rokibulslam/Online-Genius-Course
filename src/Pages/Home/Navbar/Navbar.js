@@ -1,6 +1,6 @@
 import React from "react";
 import { MuiNavbar, NavItem } from "mui-navbar";
-import { Button } from "@mui/material";
+import MuiButton from "../../../StyledComponent/MuiButton";
 
 const Navbar = () => {
   return (
@@ -12,9 +12,7 @@ const Navbar = () => {
         <NavItem to="/course">OUR COURSES</NavItem>
         <NavItem to="/contact">CONTACT</NavItem>
         <NavItem to="/login">
-          <Button variant="contained" color="secondary">
-            LOGIN
-          </Button>
+          <MuiButton sx={{ color: "white", padding: "5px 30px", fontSize: "18px" }}>Login</MuiButton>
         </NavItem>
       </MuiNavbar>
     </div>
