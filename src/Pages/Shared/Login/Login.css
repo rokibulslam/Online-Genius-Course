@@ -1,0 +1,132 @@
+/* -------------------------------
+Font include
+---------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+/* -------------------------------
+Login page design
+---------------------------------- */
+.login-body {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  background: url(https://i.ibb.co/XCknLR6/Hi-Res-1000.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: content-box;
+}
+
+/* -------------------------------
+Login form design
+---------------------------------- */
+.form-wrapper {
+  width: 320px;
+  height: 430px;
+  padding: 30px 17px 17px 17px;
+  border-radius: 40px;
+  background: #ecf0f3;
+  box-shadow: 3px 3px 2px #7b0ce4, -3px -3px 2px #00c6d1;
+}
+
+.user-photo {
+  width: 81px;
+  height: 81px;
+  border-radius: 50%;
+  background: #00c6d1;
+  margin: 0 auto;
+  box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaaf, -8px -8px 15px #ffffff;
+}
+
+.user-photo i {
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.3;
+  color: #ffffff;
+}
+
+.heading {
+  text-align: center;
+  font-size: 21px;
+  padding-top: 23px;
+  letter-spacing: 0.6px;
+}
+
+.sm-text {
+  text-align: center;
+  font-size: 10px;
+  padding-top: 6px;
+  letter-spacing: 3.1px;
+}
+
+.input-text {
+  width: 99%;
+  padding: 30px 5.1px 5.1px 5.1px;
+}
+
+.input-text input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 14px;
+  color: #555;
+  padding: 15px 5px 10px 2px;
+}
+
+.username,
+.password {
+  margin-bottom: 25px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+}
+
+.input-text svg {
+  height: 20px;
+  margin: 0 10px -3px 25px;
+}
+
+/* -------------------------------
+Button design
+---------------------------------- */
+
+.sign-btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 99.9%;
+  height: 40px;
+  border-radius: 29.9px;
+  font-size: 15px;
+  font-weight: 699.9;
+  font-family: monospace;
+  color: #fff;
+  text-align: center;
+  background: #00c6d1;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+  transition: 0.5s;
+}
+
+.sign-btn:hover {
+  background: #01777e;
+}
+.sign-btn:active {
+  background: #7b0ce4;
+}
+.link {
+  padding-top: 30px;
+  text-align: center;
+}
+.link a {
+  color: #818af8;
+  font-size: 15px;
+  font-weight: 500;
+}

@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./Pages/Home/Home";
 import Navbar from "./Pages/Home/Navbar/Navbar";
 import Login from "./Pages/Shared/Login/Login";
+import Register from "./Pages/Shared/Register/Register";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
         </Routes>
       </BrowserRouter>
     </div>

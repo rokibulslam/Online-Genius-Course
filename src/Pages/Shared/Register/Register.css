@@ -1,0 +1,70 @@
+/* -------------------------------
+registration page design
+---------------------------------- */
+
+.register-body {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  background: url(https://i.ibb.co/Lh38W41/rgVDi1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: content-box;
+}
+
+/* -------------------------------
+Form  style design
+---------------------------------- */
+
+.form-wrapper-register {
+  width: 320px;
+  height: 530px;
+  padding: 30px 17px 17px 17px;
+  border-radius: 40px;
+  background: #ecf0f3;
+  box-shadow: 3px 3px 2px #00c6d1, -3px -3px 2px #7b0ce4;
+}
+
+.username,
+.email,
+.password,
+.password2 {
+  margin-bottom: 25px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+}
+
+/* -------------------------------
+Form button design
+---------------------------------- */
+.sign-btn2 {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 99.9%;
+  height: 40px;
+  border-radius: 29.9px;
+  font-size: 15px;
+  font-weight: 699.9;
+  font-family: monospace;
+  color: #fff;
+  text-align: center;
+  background: #06a5ad;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+  transition: 0.5s;
+}
+
+.sign-btn2:hover {
+  background: #03eaf6;
+}
+.sign-btn2:active {
+  background: #6303bd;
+}
