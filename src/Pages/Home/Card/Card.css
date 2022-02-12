@@ -1,0 +1,6 @@
+
+.effect:hover{
+    transition: transform 2s linear  ;
+    transform: scale(1.11)
+    
+}
