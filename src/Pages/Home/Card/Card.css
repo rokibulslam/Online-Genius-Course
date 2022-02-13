@@ -6,10 +6,22 @@
  
     
 }
-
-/* .btn{
-    background-color:red;
+.btn{
+    color: black;
+    font-weight: bold;
+    height: 30px;
+    width: 100px;
    
-} */
+}
+
+
+.btn:hover{
+   
+    /* background: rgb(0,218,215); */
+    background: linear-gradient(107deg, rgba(0,218,215,1) 18%, rgba(0,176,213,1) 50%); 
+    color: rgba(241, 230, 230, 0.918);
+    font-weight: bold;
+   
+}
 
 /* font-family: 'Open Sans', sans-serif; */

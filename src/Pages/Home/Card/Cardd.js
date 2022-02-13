@@ -11,7 +11,7 @@ import { Paper } from '@mui/material';
 import { Box } from '@mui/system';
 import Rating from '@mui/material/Rating';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 
 const Cardd = () => {
@@ -20,8 +20,8 @@ const Cardd = () => {
     return (
       <>
       <main>
-        <div sx={{p:60}}  style={{margin:"0 auto",width:"352px",boxShadow: "-2px 2px 37px 11px rgba(0,0,0,0.5)"}}>
-        <Card  className='effect'  sx={{ maxWidth: 352,height:222 }}>
+        <div sx={{p:60}}  style={{margin:"0 auto",width:"358px",boxShadow: "3px 2px 28px 4px rgba(0,0,0,0.33)"}}>
+        <Card style={{marginBottom:"5px",boxShadow:"3px 2px 28px 4px rgba(0,0,0,0.69)"}}  className='effect'  sx={{ maxWidth: 352,height:222 }}>
 
 
           {/*------------ img section -----------------*/}
@@ -46,14 +46,17 @@ const Cardd = () => {
                         justifyContent: 'flex-start',
                         '& > :not(style)': {
                           m: 1,
-                          width: 350,
-                          height: 218,
-                          padding:2
+                          width: 358,
+                          height:215,
+                          
+                          padding:2,
+                          borderBox:"auto"
                         },
                       }}
                     >
                     
-                      <Paper sx={{border:"none"}}>
+                      <Paper elevation={0} >
+                        <div>
                         <Typography style={{fontFamily: "'Open Sans', sans-serif",
                 color:"#525252"}} variant="subtitle1">
                         Canlye - Multipurpose React Template
@@ -62,6 +65,8 @@ const Cardd = () => {
                           <p style={{fontSize:"13px",color:"#444"}}>By Wpoceans</p>
                         </Typography>
 
+                        </div>
+                       
 
                         {/* <Typography component="legend">Controlled</Typography> */}
                 <Box  sx={{ display: 'flex'}}>
@@ -72,23 +77,28 @@ const Cardd = () => {
                     setValue(newValue);
                   }}
                 ></Rating>
-                <p>(05)</p>
+                <Typography>(05)</Typography>
                 </Box>
 
 
+                <hr  style={{margin:"28px 0",display:"block",color:"#ecebed"}} ></hr>
 
-                <div>
+  <div style={{display:"flex",marginTop:"3px"}}>
       <div>
+      <Typography variant="h4">
+      $48.00
+      </Typography>
         
       </div>
-      <div>
-      <Button  style={{backgroundColor:"linear-gradient(107deg, rgba(0,218,215,1) 32%, rgba(0,176,213,1) 59%)"}} sx={{ border: 1 }}>Preview</Button>
+      <Box sx={{ml:5}}>
+      <Button className="btn" style={{border:"1px solid #ecebed"}}><span >Preview</span></Button>
 
-      <FontAwesomeIcon  className="icon" icon={faCoffee}></FontAwesomeIcon>
-
+      {/* <FontAwesomeIcon  className="icon" icon={ }></FontAwesomeIcon> */}
+      {/* <FontAwesomeIcon icon="faShoping" /> */}
       {/* <i class="fa-solid fa-cart-shopping"></i> */}
-
-      </div>
+     <FontAwesomeIcon icon="faCartShopping"></FontAwesomeIcon>
+     <FontAwesomeIcon  className="icon" icon={faShoppingCart}></FontAwesomeIcon>
+      </Box>
     </div>
 
 
