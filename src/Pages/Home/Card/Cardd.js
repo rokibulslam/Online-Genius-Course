@@ -10,6 +10,8 @@ import "./Card.css"
 import { Paper } from '@mui/material';
 import { Box } from '@mui/system';
 import Rating from '@mui/material/Rating';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 
 const Cardd = () => {
@@ -82,7 +84,8 @@ const Cardd = () => {
       <div>
       <Button  style={{backgroundColor:"linear-gradient(107deg, rgba(0,218,215,1) 32%, rgba(0,176,213,1) 59%)"}} sx={{ border: 1 }}>Preview</Button>
 
-    
+      <FontAwesomeIcon  className="icon" icon={faCoffee}></FontAwesomeIcon>
+
       {/* <i class="fa-solid fa-cart-shopping"></i> */}
 
       </div>
