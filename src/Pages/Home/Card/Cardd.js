@@ -74,9 +74,26 @@ const Cardd = () => {
                 </Box>
 
 
+
+                <div>
+      <div>
+        
+      </div>
+      <div>
+      <Button  style={{backgroundColor:"linear-gradient(107deg, rgba(0,218,215,1) 32%, rgba(0,176,213,1) 59%)"}} sx={{ border: 1 }}>Preview</Button>
+
+    
+      {/* <i class="fa-solid fa-cart-shopping"></i> */}
+
+      </div>
+    </div>
+
+
                       </Paper>
      
     </Box>
+
+  
 
     
   
@@ -85,7 +102,8 @@ const Cardd = () => {
    
 
    
-
+        <i style={{color:"#0000"}} className="fa-light fa-cart-shopping"></i>
+        
       </main>
    
    
