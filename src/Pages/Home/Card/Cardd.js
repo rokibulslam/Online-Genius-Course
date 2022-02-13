@@ -17,35 +17,26 @@ const Cardd = () => {
 
     return (
       <>
-      <div >
-        <div sx={{Width: 352 }} style={{boxShadow: "-2px 2px 37px 11px rgba(0,0,0,0.5)"}}>
+      <main>
+        <div sx={{p:60}}  style={{margin:"0 auto",width:"352px",boxShadow: "-2px 2px 37px 11px rgba(0,0,0,0.5)"}}>
         <Card  className='effect'  sx={{ maxWidth: 352,height:222 }}>
+
+
+          {/*------------ img section -----------------*/}
       <CardMedia
         component="img"
         alt="green iguana"
         height="222"
         image={cardOne}
       />
-      {/* <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent> */}
-      {/* <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions> */}
+      
 
 
 
  
 
     </Card>
-
+ {/*----------------------------- text section------------------ */}
     <Box
                       sx={{
                         display: 'flex',
@@ -55,6 +46,7 @@ const Cardd = () => {
                           m: 1,
                           width: 350,
                           height: 218,
+                          padding:2
                         },
                       }}
                     >
@@ -94,7 +86,7 @@ const Cardd = () => {
 
    
 
-      </div>
+      </main>
    
    
 
