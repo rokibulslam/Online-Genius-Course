@@ -18,7 +18,7 @@ const Cardd = () => {
     return (
       <>
       <div >
-        <div style={{boxShadow: "-2px 2px 37px 11px rgba(0,0,0,0.5)"}}>
+        <div sx={{Width: 352 }} style={{boxShadow: "-2px 2px 37px 11px rgba(0,0,0,0.5)"}}>
         <Card  className='effect'  sx={{ maxWidth: 352,height:222 }}>
       <CardMedia
         component="img"
