@@ -1,6 +1,10 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Vesper+Libre:wght@900&display=swap'); */
 
 .effect:hover{
-    transition: transform 2s linear  ;
-    transform: scale(1.11)
+    transition: transform 2s linear;
+    transform: scale(1.11);
+ 
     
 }
+
+/* font-family: 'Open Sans', sans-serif; */

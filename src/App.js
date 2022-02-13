@@ -5,7 +5,7 @@ import Cardd from './Pages/Home/Card/Cardd';
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <Cardd></Cardd>
 
     </div>
