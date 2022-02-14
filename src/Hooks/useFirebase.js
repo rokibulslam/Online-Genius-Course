@@ -35,7 +35,7 @@ const useFirebase = () => {
     
     
     
-    return {signInWithGoogle}
+    return { signInWithGoogle };
 };
 
 export default useFirebase;

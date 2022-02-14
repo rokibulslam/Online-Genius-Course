@@ -1,13 +1,19 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import useAuth from "../../../Hooks/useAuth";
 import "./Login.css";
 
 
 
 const Login = () => {
+  const { signInWithGoogle } = useAuth()
+  
+  const location = useLocation()
+  const navigate = useNavigate()
 
   const handleGoogleSign = () => {
-    
+    console.log('clicked')
+    signInWithGoogle(location, navigate);
   }
   return (
     <div className="login-body">
@@ -43,7 +49,8 @@ const Login = () => {
         <div style={{ textAlign: "center" }}>
           <p>Or login with</p>
           {/* Google Icon  */}
-          <button className="social-button">
+          <button onClick={handleGoogleSign}  className="social-button">
+            
             <img
               style={{ width: "35px", borderRadius: "50%" }}
               src="https://i.ibb.co/MPcSmVD/download.png"
@@ -51,7 +58,7 @@ const Login = () => {
             />
           </button>
           {/* Github Icon  */}
-          <button onClick={handleGoogleSign} className="social-button">
+          <button className="social-button">
             <img
               style={{ width: "35px", borderRadius: "50%" }}
               src="https://i.ibb.co/8YNdYgm/download-1.png"
