@@ -8,3 +8,7 @@ custom design styles
 .bg-primary {
   background-color: #00c6d1;
 }
+
+li {
+  list-style-type: none;
+}

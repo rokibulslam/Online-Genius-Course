@@ -1,0 +1,23 @@
+.history-card {
+  background: #4ac29a; /* fallback for old browsers */
+  background: linear-gradient(to right, #e0fefe, rgba(255, 255, 255, 0.829)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, rgba(255, 255, 255, 0.815), #e0fefe); /* Chrome 10-25, Safari 5.1-6 */
+}
+
+.pricing-rate {
+  color: #0c055abb;
+  font-size: 55px;
+  font-weight: bold;
+}
+.dollar-sign {
+  color: #7a68f6;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card {
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}

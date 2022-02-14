@@ -18,10 +18,10 @@ const Banner = () => {
               <Box sx={{ display: "flex" }}>
                 {/* first button */}
 
-                <button class="cssbuttons-io-button">
+                <button className="cssbuttons-io-button">
                   {" "}
                   Get started now
-                  <div class="icon">
+                  <div className="icon">
                     <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0 0h24v24H0z" fill="none"></path>
                       <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
@@ -30,7 +30,7 @@ const Banner = () => {
                 </button>
 
                 {/* 2nd button */}
-                <button class="cta">
+                <button className="cta">
                   <span> Explore courses</span>
                   <svg width="15px" height="10px" viewBox="0 0 13 10">
                     <path d="M1,5 L11,5"></path>
