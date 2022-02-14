@@ -20,24 +20,30 @@ const Cardd = () => {
     return (
       <>
       <main>
-        <div sx={{p:60}}  style={{margin:"0 auto",width:"358px",boxShadow: "3px 2px 28px 4px rgba(0,0,0,0.33)"}}>
-        <Card style={{marginBottom:"5px",boxShadow:"3px 2px 28px 4px rgba(0,0,0,0.69)"}}  className='effect'  sx={{ maxWidth: 352,height:222 }}>
+        <div className='parent' sx={{p:60}}  style={{margin:"0 auto",width:"390px",boxShadow: "8px -1px 45px -13px #000000"}}>
+        <span className="badge trending">trending</span>
+
+        <div style={{padding:"12px"}}>
+          <Card style={{boxShadow:"3px 2px 28px 4px rgba(0,0,0,0.69)"}}  className='effect'  sx={{ maxWidth: 416,height:222 }}>
 
 
-          {/*------------ img section -----------------*/}
+{/*------------ img section -----------------*/}
       <CardMedia
-        component="img"
-        alt="green iguana"
-        height="222"
-        image={cardOne}
+      component="img"
+      alt="green iguana"
+      height="222"
+      image={cardOne}
       />
-      
 
 
 
- 
 
-    </Card>
+
+
+</Card>
+
+          </div>
+        
  {/*----------------------------- text section------------------ */}
     <Box
                       sx={{
@@ -45,11 +51,11 @@ const Cardd = () => {
                         // flexWrap: 'wrap',
                         justifyContent: 'flex-start',
                         '& > :not(style)': {
-                          m: 1,
-                          width: 358,
+                          
+                          width: 390,
                           height:215,
                           
-                          padding:2,
+                          padding:3,
                           borderBox:"auto"
                         },
                       }}
@@ -57,8 +63,8 @@ const Cardd = () => {
                     
                       <Paper elevation={0} >
                         <div>
-                        <Typography style={{fontFamily: "'Open Sans', sans-serif",
-                color:"#525252"}} variant="subtitle1">
+                        <Typography style={{fontWeight:"bold",fontFamily: "'Open Sans', sans-serif",
+                color:"#525252",opacity:"0.7"}} variant="subtitle1">
                         Canlye - Multipurpose React Template
                         </Typography>
                         <Typography>
@@ -81,23 +87,25 @@ const Cardd = () => {
                 </Box>
 
 
-                <hr  style={{margin:"28px 0",display:"block",color:"#ecebed"}} ></hr>
+                <hr  style={{margin:"28px 0",display:"block",color:"#ecebed",opacity:"0.3"}} ></hr>
 
-  <div style={{display:"flex",marginTop:"3px"}}>
+  <div style={{display:"flex",justifyContent: 'space-between',marginTop:"3px"}}>
       <div>
-      <Typography variant="h4">
+      <Typography style={{color:"#242f6c"}} variant="h4">
       $48.00
       </Typography>
         
       </div>
-      <Box sx={{ml:5}}>
+      <Box sx={{ml:5,display:"flex"}}>
       <Button className="btn" style={{border:"1px solid #ecebed"}}><span >Preview</span></Button>
 
       {/* <FontAwesomeIcon  className="icon" icon={ }></FontAwesomeIcon> */}
       {/* <FontAwesomeIcon icon="faShoping" /> */}
       {/* <i class="fa-solid fa-cart-shopping"></i> */}
-     <FontAwesomeIcon icon="faCartShopping"></FontAwesomeIcon>
-     <FontAwesomeIcon  className="icon" icon={faShoppingCart}></FontAwesomeIcon>
+     {/* <FontAwesomeIcon icon="faCartShopping"></FontAwesomeIcon> */}
+     <FontAwesomeIcon classname="icon" style={{borderRadius:"2px",padding:"6px 13px",marginLeft:"15px"}} className="icon" icon={faShoppingCart}></   FontAwesomeIcon>
+
+    
       </Box>
     </div>
 

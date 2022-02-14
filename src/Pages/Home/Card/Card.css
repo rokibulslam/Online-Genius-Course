@@ -1,8 +1,8 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Vesper+Libre:wght@900&display=swap'); */
 
 .effect:hover{
-    transition: transform 2s linear;
-    transform: scale(1.11);
+    transition: transform 1s linear;
+    transform: scale(1.09);
  
     
 }
@@ -13,9 +13,42 @@
     width: 100px;
    
 }
+.parent{
+    position: relative;
+}
+.badge{
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+    text-transform: capitalize;
+    border-radius: 1px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 0px 4px rgb(255 255 255 / 30%);
+    z-index: 1;
+}
+.badge{
+    background: linear-gradient(to left, #00a7d5, #00ded8);
+}
 
 
-.btn:hover{
+
+.btn span{
+    color: #242f6c;
+    font-weight: bold;
+
+}
+.btn span:hover{
+    font-weight: bold;
+    color: rgba(241, 230, 230, 0.918);
+}
+
+
+.icon,.btn:hover{
    
     /* background: rgb(0,218,215); */
     background: linear-gradient(107deg, rgba(0,218,215,1) 18%, rgba(0,176,213,1) 50%); 
@@ -23,5 +56,7 @@
     font-weight: bold;
    
 }
-
+/* .icon:hover{
+    background-color: ;
+} */
 /* font-family: 'Open Sans', sans-serif; */
