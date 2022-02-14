@@ -1,11 +1,36 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Vesper+Libre:wght@900&display=swap'); */
 
-.effect:hover{
+.effect{
     transition: transform 1s linear;
+    transform: scale(1);
+    /* width: 400px; */
+ 
+    
+}
+.effect:hover{
+    /* transition: transform 1s linear; */
     transform: scale(1.09);
  
     
 }
+
+
+.see{
+    width: 100px;
+    transform: scale(1);
+  height: 100px;
+  background: red;
+  transition: transform 2s;
+}
+
+.see:hover{
+    /* width: 300px; */
+    transform: scale(2);
+
+}
+
+
+
 .btn{
     color: black;
     font-weight: bold;
@@ -56,7 +81,3 @@
     font-weight: bold;
    
 }
-/* .icon:hover{
-    background-color: ;
-} */
-/* font-family: 'Open Sans', sans-serif; */

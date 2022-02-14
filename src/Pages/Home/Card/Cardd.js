@@ -1,7 +1,5 @@
 import React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -25,14 +23,13 @@ const Cardd = () => {
           {/*--------------- treanding badge------------- */}
         <span className="badge trending">trending</span>
 
-        <div style={{padding:"12px"}}>
+        <div className='effect'  style={{padding:"12px"}}>
 
-        {/*--------------- card section ----------*/}
-          <Card style={{boxShadow:"3px 2px 28px 4px rgba(0,0,0,0.69)"}}  className='effect'  sx={{ maxWidth: 416,height:222 }}>
-
+{/*--------------- card section ----------*/}
+<Card style={{boxShadow:"3px 2px 28px 4px rgba(0,0,0,0.69)"}}   sx={{ Width: 416,height:222 }}>
 
 {/*------------card img section -----------------*/}
-      <CardMedia
+      <CardMedia  
       component="img"
       alt="green iguana"
       height="222"
@@ -49,7 +46,7 @@ const Cardd = () => {
           </div>
         
  {/*-----------------------------card text section------------------ */}
-    <Box
+    <Box  
                       sx={{
                         display: 'flex',
                         // flexWrap: 'wrap',
