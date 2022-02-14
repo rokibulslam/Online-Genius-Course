@@ -20,14 +20,18 @@ const Cardd = () => {
     return (
       <>
       <main>
+  {/*----------------------- card body---------------------- */}
         <div className='parent' sx={{p:60}}  style={{margin:"0 auto",width:"390px",boxShadow: "8px -1px 45px -13px #000000"}}>
+          {/*--------------- treanding badge------------- */}
         <span className="badge trending">trending</span>
 
         <div style={{padding:"12px"}}>
+
+        {/*--------------- card section ----------*/}
           <Card style={{boxShadow:"3px 2px 28px 4px rgba(0,0,0,0.69)"}}  className='effect'  sx={{ maxWidth: 416,height:222 }}>
 
 
-{/*------------ img section -----------------*/}
+{/*------------card img section -----------------*/}
       <CardMedia
       component="img"
       alt="green iguana"
@@ -44,7 +48,7 @@ const Cardd = () => {
 
           </div>
         
- {/*----------------------------- text section------------------ */}
+ {/*-----------------------------card text section------------------ */}
     <Box
                       sx={{
                         display: 'flex',
@@ -73,9 +77,8 @@ const Cardd = () => {
 
                         </div>
                        
-
-                        {/* <Typography component="legend">Controlled</Typography> */}
                 <Box  sx={{ display: 'flex'}}>
+  {/*------------------ rating section--------------------------*/}
                 <Rating sx={{mr:3}}
                   name="simple-controlled"
                   value={value}
@@ -86,7 +89,7 @@ const Cardd = () => {
                 <Typography>(05)</Typography>
                 </Box>
 
-
+{/* ----------------------hr bar--------------------------------- */}
                 <hr  style={{margin:"28px 0",display:"block",color:"#ecebed",opacity:"0.3"}} ></hr>
 
   <div style={{display:"flex",justifyContent: 'space-between',marginTop:"3px"}}>
@@ -96,23 +99,19 @@ const Cardd = () => {
       </Typography>
         
       </div>
-      <Box sx={{ml:5,display:"flex"}}>
-      <Button className="btn" style={{border:"1px solid #ecebed"}}><span >Preview</span></Button>
+          <Box sx={{ml:5,display:"flex"}}>
+                      <Button className="btn" style={{border:"1px solid #ecebed"}}><span >Preview</span></Button>
+ {/* -----------------------font awesome icon --------------------*/}
+                    <FontAwesomeIcon classname="icon" style={{borderRadius:"2px",padding:"6px 13px",marginLeft:"15px"}} className="icon" icon={faShoppingCart}></   FontAwesomeIcon>
 
-      {/* <FontAwesomeIcon  className="icon" icon={ }></FontAwesomeIcon> */}
-      {/* <FontAwesomeIcon icon="faShoping" /> */}
-      {/* <i class="fa-solid fa-cart-shopping"></i> */}
-     {/* <FontAwesomeIcon icon="faCartShopping"></FontAwesomeIcon> */}
-     <FontAwesomeIcon classname="icon" style={{borderRadius:"2px",padding:"6px 13px",marginLeft:"15px"}} className="icon" icon={faShoppingCart}></   FontAwesomeIcon>
-
-    
-      </Box>
-    </div>
+        
+          </Box>
+      </div>
 
 
-                      </Paper>
+    </Paper>
      
-    </Box>
+</Box>
 
   
 
@@ -120,12 +119,8 @@ const Cardd = () => {
   
 
         </div>
-   
-
-   
-        <i style={{color:"#0000"}} className="fa-light fa-cart-shopping"></i>
-        
-      </main>
+          
+</main>
    
    
 
