@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 import initializeFirebase from '../Firebase/Firebase.init';
 
@@ -31,6 +31,13 @@ const useFirebase = () => {
       })
       .finally(() => setIsLoading(false));
   };
+  const register = (name, password, email, navigation) => {
+    createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
+      setAuthError("")
+
+      const newUser = userCredential.user
+    });
+  }
     
     
     
