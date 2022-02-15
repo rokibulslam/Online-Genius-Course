@@ -1,3 +1,4 @@
+import { Alert } from "@mui/material";
 import React, { useState } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import useAuth from '../../../Hooks/useAuth'
@@ -85,9 +86,11 @@ const Register = () => {
               placeholder="confirm password*"
             />
           </div>
-          <button type="submit" class="sign-btn2">SIGNUP</button>
+          <button type="submit" class="sign-btn2">
+            SIGNUP
+          </button>
         </form>
-
+        {authError && <Alert severity="warning">{authError}</Alert>}
         <div class="link">
           Already have an account? <NavLink to="/login">Sign in</NavLink>
         </div>

@@ -1,3 +1,4 @@
+import { Alert, CircularProgress } from "@mui/material";
 import React, { useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
@@ -70,6 +71,7 @@ const Login = () => {
         </form>
 
         <div style={{ textAlign: "center" }}>
+          {authError && <Alert severity="warning">{authError}</Alert>}
           <p>Or login with</p>
           {/* Google Icon  */}
           <button onClick={handleGoogleSign} className="social-button">

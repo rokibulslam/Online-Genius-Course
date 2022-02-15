@@ -4,7 +4,7 @@ import MuiButton from "../../../StyledComponent/MuiButton";
 import useAuth from "../../../Hooks/useAuth";
 import profile from "../../../Image/profile.png"
 const Navbar = () => {
-    const {user} = useAuth()
+    const {user, logout} = useAuth()
   return (
     <div>
       {/* Mui-navbar package used */}
@@ -13,7 +13,7 @@ const Navbar = () => {
         <NavItem to="/about">ABOUT US</NavItem>
         <NavItem to="/course">OUR COURSES</NavItem>
         <NavItem to="/contact">CONTACT</NavItem>
-        {user.email ? (
+        {!user.email ? (
           <NavItem to="/login">
             <MuiButton
               sx={{ color: "white", padding: "5px 30px", fontSize: "18px" }}
@@ -22,8 +22,9 @@ const Navbar = () => {
             </MuiButton>
           </NavItem>
         ) : (
-          <NavItem to="/login">
-            <MuiButton
+          <NavItem to="/register">
+              <MuiButton
+                onClick={logout}
               sx={{ color: "white", padding: "5px 30px", fontSize: "18px" }}
             >
               Logout
@@ -31,7 +32,6 @@ const Navbar = () => {
           </NavItem>
         )}
         <NavItem>{user.displayName}</NavItem>
-        
         
       </MuiNavbar>
     </div>
