@@ -68,7 +68,7 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
   // Login User
-  const loginUser = (email, password, location, navigate) => {
+  const loginUser = (email, password, location, navigate) =>{
     setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
