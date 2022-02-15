@@ -11,9 +11,6 @@ function App() {
   return (
     <div className="App">
      
-        
-
-
       <AuthProvider>
         <Router>
           <Navbar />
