@@ -4,6 +4,7 @@ import Banner from "./Banner/Banner";
 import Cardd from "./Card/Cardd";
 import CourseDetails from "./CourseDetails/CourseDetails";
 import Features from "./Features/Features";
+import Feedback from "../Feedback/Feedback";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <CourseDetails></CourseDetails>
       <Countup></Countup>
       <Features></Features>
+      <Feedback></Feedback>
     </div>
   );
 };

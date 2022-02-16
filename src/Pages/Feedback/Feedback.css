@@ -1,0 +1,16 @@
+.parents_img{
+    position: relative;
+
+}
+
+.IMAGE_RADIUS{
+    display: inline-block;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 50%;
+    position: absolute;
+    top: -35px;
+    /* height:75px;
+    width: 75px; */
+}
