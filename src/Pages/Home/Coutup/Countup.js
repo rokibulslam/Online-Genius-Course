@@ -4,32 +4,25 @@ import Paper from '@mui/material/Paper';
 import { Box } from '@mui/system';
 import { Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import network from "../../../src/Images/network .png"
-import member from "../../../src/Images/employee.png"
-import smile from "../../../src/Images/smile.png"
-import download from "../../Images/download.png"
+import network from "../../../Images/network .png"
+import member from "../../../Images/employee.png"
+import smile from "../../../Images/smile.png"
+import download from "../../../Images/download.png"
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import CountUp from 'react-countup';
 
-
-
-// const Item = styled(Paper)(({ theme }) => ({
-//     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-//     ...theme.typography.body2,
-//     padding: theme.spacing(1),
-//     textAlign: 'center',
-//     color: theme.palette.text.secondary,
-//   }));
 
 const Countup = () => {
     return (
         <>
 
         <main>
-            <div style={{padding:"0 50px",display:"flex",justifyContent:"space-between"}}>
+            <h1>Count section (Should be remove this line)</h1>
+            <div style={{padding:"100px",display:"flex",justifyContent:"space-between",background:"#f9fbfb"}}>
                 
 <Grid container spacing={2}>
+
         <Grid item xs={6} md={3}>
                         <Box
                                 sx={{
@@ -108,7 +101,7 @@ const Countup = () => {
                 </CountUp>
 
 
-                <p style={{fontSize:"16px"}}>Amazing Products</p>
+                <p style={{fontSize:"16px"}}>Total Downloads</p>
 </Box>
         </Typography>
     </Paper>
@@ -152,7 +145,7 @@ const Countup = () => {
                 </CountUp>
 
 
-                <p style={{fontSize:"16px"}}>Amazing Products</p>
+                <p style={{fontSize:"16px"}}>Happy Customers</p>
 </Box>
         </Typography>
     </Paper>
@@ -193,7 +186,7 @@ const Countup = () => {
                 </CountUp>
 
 
-                <p style={{fontSize:"16px"}}>Amazing Products</p>
+                <p style={{fontSize:"16px"}}>Team Members</p>
 </Box>
         </Typography>
     </Paper>
