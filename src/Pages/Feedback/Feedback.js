@@ -46,10 +46,11 @@ const Feedback = () => {
         <img className='IMAGE_RADIUS' style={{borderRadius:"50%",height:"75px",width:"75px"}} src={c_one} alt="" />
         </div>
 
-<Box style={{textAlign:"center",lineHeight:"0.1px"}}>
+<Box style={{lineHeight:"0.1px"}}>
 
-                <p style={{fontSize:"24px",fontWeight:"bold"}}>Security Assurance</p>
-                <Typography sx={{p:5}} variant="body1">Our template architecture is designed for maximize security and prevent malware, Dos Attack other.</Typography>
+                <p style={{fontSize:"24px",fontWeight:"bold"}}>Henry Jimac</p>
+                <p style={{fontSize:"13px",fontWeight:"bold"}}>Head of  Mahrs</p>
+                <Typography sx={{p:5}} variant="body1">Edefy template dolor sit amet, consectetur adipiscing elit, beautiful sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Typography>
 </Box>
         </Typography>
     </Paper>
