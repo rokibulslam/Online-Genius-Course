@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import AuthProvider from "./Context/AuthProvider";
+import CourseDetails from "./Pages/Home/CourseDetails/CourseDetails";
 import Home from "./Pages/Home/Home";
 import Navbar from "./Pages/Home/Navbar/Navbar";
 import Login from "./Pages/Shared/Login/Login";
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<CourseDetails />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Routes>
