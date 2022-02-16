@@ -32,30 +32,17 @@ const Features = () => {
                                     },
                                 }}
                                 >
-  
-    <Paper sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{height:"268px",width:"292px"}}>
-        <Typography sx={{padding:16,textAlign:"center"}}  variant="h3">
+    {/*------------------------ card 1 ---------------------*/}
 
-            <img style={{marginLeft:"25px",height:"60px",width:"60px"}} src={security} alt="" />
+    <Paper sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{boxShadow:"5px 5px 23px 0px rgba(0,0,0,0.8)",height:"376px",width:"392px"}}>
+        <Typography sx={{textAlign:"center"}}  variant="h3">
 
-            <Box >
+            <img style={{padding:16,marginLeft:"25px",height:"90px",width:"90px"}} src={security} alt="" />
 
+<Box style={{textAlign:"center"}}>
 
-
-{/*---------------- count up -----------*/}
-                <CountUp  start={2000} end={2025} delay={0} duration={2}>
-                            {({ countUpRef }) => (
-                                <div style={{display:"flex",alignItems:"center"}}>
-                                <span style={{fontWeight:"bold",color:"#242f6c",fontSize:"35px",margin:"0 3px"}} ref={countUpRef}></span>
-                                <Typography variant="h3">
-                                    +
-                                </Typography>
-                                </div>
-                            )}
-                </CountUp>
-
-
-                <p style={{fontSize:"16px"}}>Amazing Products</p>
+                <p style={{fontSize:"24px",fontWeight:"bold"}}>Security Assurance</p>
+                <Typography sx={{p:4}} variant="body1">Our template architecture is designed for maximize security and prevent malware, Dos Attack other.</Typography>
 </Box>
         </Typography>
     </Paper>
@@ -75,30 +62,17 @@ const Features = () => {
                                     },
                                 }}
                                 >
-  
-    <Paper sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{height:"268px",width:"292px"}}>
-        <Typography sx={{padding:16,textAlign:"center"}}  variant="h3">
+    {/*------------------------ card 2 ---------------------*/}
 
-        <img style={{height:"60px",width:"60px"}} src={support} alt="" />
+    <Paper sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{boxShadow:"5px 5px 23px 0px rgba(0,0,0,0.8)",height:"376px",width:"392px"}}>
+        <Typography sx={{textAlign:"center"}}  variant="h3">
 
-            <Box >
+        <img style={{padding:"16px",height:"90px",width:"90px"}} src={support} alt="" />
 
+        <Box style={{textAlign:"center"}}>
 
-
-{/*---------------- count up -----------*/}
-                <CountUp  start={630100} end={630168} delay={0} duration={2}>
-                            {({ countUpRef }) => (
-                                <div style={{display:"flex",alignItems:"center"}}>
-                                <span style={{fontWeight:"bold",color:"#242f6c",fontSize:"35px",margin:"0 3px"}} ref={countUpRef}></span>
-                                <Typography variant="h3">
-                                    +
-                                </Typography>
-                                </div>
-                            )}
-                </CountUp>
-
-
-                <p style={{fontSize:"16px"}}>Total Downloads</p>
+                    <p style={{fontSize:"24px",fontWeight:"bold"}}>Best Customer Support</p>
+                    <Typography sx={{p:4}} variant="body1">Testing closely, we ship templates. Yet,but anything goes out of track, Support team is there to get it</Typography>
 </Box>
         </Typography>
     </Paper>
@@ -118,31 +92,17 @@ const Features = () => {
                                     },
                                 }}
                                 >
-  
-    <Paper sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{height:"268px",width:"292px"}}>
-        <Typography sx={{padding:16,textAlign:"center"}}  variant="h3">
+  {/*------------------------ card 3 ---------------------*/}
+    <Paper sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{boxShadow:"5px 5px 23px 0px rgba(0,0,0,0.8)",height:"376px",width:"392px"}}>
+        <Typography sx={{textAlign:"center"}}  variant="h3">
 
-        <img style={{height:"60px",width:"60px"}} src={quality} alt="" />
-
-
-            <Box >
+        <img style={{padding:16,height:"90px",width:"90px"}} src={quality} alt="" />
 
 
+        <Box style={{textAlign:"center"}}>
 
-{/*---------------- count up -----------*/}
-                <CountUp  start={35600} end={35620} delay={0} duration={2}>
-                            {({ countUpRef }) => (
-                                <div style={{display:"flex",alignItems:"center"}}>
-                                <span style={{fontWeight:"bold",color:"#242f6c",fontSize:"35px",margin:"0 3px"}} ref={countUpRef}></span>
-                                <Typography variant="h3">
-                                    +
-                                </Typography>
-                                </div>
-                            )}
-                </CountUp>
-
-
-                <p style={{fontSize:"16px"}}>Happy Customers</p>
+                    <p style={{fontSize:"24px",fontWeight:"bold"}}>Great Quality template</p>
+                    <Typography sx={{p:4}} variant="body1">We craft powerful templates to keep visitors engaged and maximize store sales extensively.</Typography>
 </Box>
         </Typography>
     </Paper>
