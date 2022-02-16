@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-/* -------------------------
-custom design styles
---------------------------- */
-=======
 .App {
   text-align: center;
  
@@ -29,7 +24,6 @@ custom design styles
   font-size: calc(10px + 2vmin);
   color: white;
 }
->>>>>>> card/anis
 
 .primary-color {
   color: #00c6d1;
