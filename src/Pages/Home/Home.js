@@ -1,6 +1,8 @@
 import React from "react";
+import AddProduct from "../Dashboard/AddProduct/AddProduct";
 import Banner from "./Banner/Banner";
-import Cardd from "./Card/Cardd";
+import Cardd from "./Cardd/Cardd";
+
 import CourseDetails from "./CourseDetails/CourseDetails";
 
 const Home = () => {
@@ -8,7 +10,7 @@ const Home = () => {
     <div>
       <Banner />
       <Cardd></Cardd>
-      <CourseDetails></CourseDetails>
+      <AddProduct></AddProduct>
     </div>
   );
 };
