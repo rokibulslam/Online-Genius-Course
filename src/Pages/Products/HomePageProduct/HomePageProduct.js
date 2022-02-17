@@ -18,7 +18,7 @@ const HomePageProduct = () => {
 
   return (
     <div sx={{ py: 5 }}>
-      <h1 className="py-4 pb-5">Explore Our Apartments Collection</h1>
+      <h1 className="py-4 pb-5">Explore Our Course Collection</h1>
       {isLoading && (
         <div>
           <CircularProgress></CircularProgress>

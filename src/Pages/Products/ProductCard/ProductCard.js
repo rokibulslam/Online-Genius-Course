@@ -11,9 +11,9 @@ import Rating from "@mui/material/Rating";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-const ProductCard = () => {
+const ProductCard = (props) => {
   const [value, setValue] = React.useState(2);
-
+  const { product } = props;
   return (
     <>
       <Grid
@@ -77,10 +77,10 @@ const ProductCard = () => {
                   }}
                   variant="subtitle1"
                 >
-                  Canlye - Multipurpose React Template
+                  {product?.Name}
                 </Typography>
                 <Typography>
-                  <p style={{ fontSize: "13px", color: "#444" }}>By Wpoceans</p>
+                  <p style={{ fontSize: "13px", color: "#444" }}>{product?.Author}</p>
                 </Typography>
               </div>
 
@@ -116,7 +116,7 @@ const ProductCard = () => {
               >
                 <div>
                   <Typography style={{ color: "#242f6c" }} variant="h4">
-                    $48.00
+                    ${product?.Price}
                   </Typography>
                 </div>
                 <Box sx={{ ml: 5, display: "flex" }}>
