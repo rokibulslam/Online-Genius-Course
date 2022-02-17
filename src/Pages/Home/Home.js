@@ -5,6 +5,7 @@ import ProductCard from "../Products/ProductCard/ProductCard";
 
 import CourseDetails from "./CourseDetails/CourseDetails";
 import HomePageProduct from "../Products/HomePageProduct/HomePageProduct";
+import Pricing from "./Pricing/Pricing";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Banner />
       <HomePageProduct></HomePageProduct>
       <AddProduct></AddProduct>
+      <Pricing></Pricing>
     </div>
   );
 };

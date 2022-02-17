@@ -17,8 +17,8 @@ const HomePageProduct = () => {
   }, []);
 
   return (
-    <div sx={{ py: 5 }}>
-      <h1 className="py-4 pb-5">Explore Our Course Collection</h1>
+    <div style={{textAlign: 'center', paddingTop: '100px', paddingBottom:'100px'}} sx={{ py: 5 }}>
+      <h1 style={{marginBottom: '50px'}}>Explore Our Course Collection</h1>
       {isLoading && (
         <div>
           <CircularProgress></CircularProgress>
