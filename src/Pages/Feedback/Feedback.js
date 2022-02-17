@@ -79,10 +79,11 @@ const Feedback = () => {
         <img className='IMAGE_RADIUS' style={{borderRadius:"50%",height:"75px",width:"75px"}} src={c_one} alt="" />
         </div>
 
-        <Box style={{textAlign:"center",lineHeight:"0.1px"}}>
+        <Box style={{lineHeight:"0.1px"}}>
 
-                    <p style={{fontSize:"24px",fontWeight:"bold"}}>Best Customer Support</p>
-                    <Typography sx={{p:4}} variant="body1">Testing closely, we ship templates. Yet,but anything goes out of track, Support team is there to get it</Typography>
+                <p style={{fontSize:"24px",fontWeight:"bold"}}>Merry Jimac</p>
+                <p style={{fontSize:"13px",fontWeight:"bold"}}>Head of  Mahrs</p>
+                <Typography sx={{p:5}} variant="body1">Edefy template dolor sit amet, consectetur adipiscing elit, beautiful sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Typography>
 </Box>
         </Typography>
     </Paper>
@@ -111,10 +112,11 @@ const Feedback = () => {
         </div>
 
 
-        <Box style={{textAlign:"center",lineHeight:"0.1px"}}>
+        <Box style={{lineHeight:"0.1px"}}>
 
-                    <p style={{fontSize:"24px",fontWeight:"bold"}}>Great Quality template</p>
-                    <Typography sx={{p:4}} variant="body1">We craft powerful templates to keep visitors engaged and maximize store sales extensively.</Typography>
+<p style={{fontSize:"24px",fontWeight:"bold"}}>Robert Downy</p>
+<p style={{fontSize:"13px",fontWeight:"bold"}}>CEO  Mahrs</p>
+<Typography sx={{p:5}} variant="body1">Edefy template dolor sit amet, consectetur adipiscing elit, beautiful sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Typography>
 </Box>
         </Typography>
     </Paper>
