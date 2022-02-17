@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+/* -------------------------
+custom design styles
+--------------------------- */
+=======
 .App {
   text-align: center;
+ 
 }
 
 .App-logo {
@@ -23,16 +29,15 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+>>>>>>> card/anis
 
-.App-link {
-  color: #61dafb;
+.primary-color {
+  color: #00c6d1;
+}
+.bg-primary {
+  background-color: #00c6d1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li {
+  list-style-type: none;
 }
