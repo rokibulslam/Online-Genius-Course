@@ -10,7 +10,7 @@ const HomePageProduct = () => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://immense-wildwood-96183.herokuapp.com/apartments")
+    fetch("http://localhost:5000/courses")
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .finally(() => setIsLoading(false));

@@ -36,10 +36,7 @@ const AddProduct = () => {
     //   Send Product to Database
     e.preventDefault();
     axios
-      .post(
-        "",
-        productDetails
-      )
+      .post("http://localhost:5000/courses", productDetails)
 
       .then((res) => {
         if (res.data.insertedId) {
@@ -103,6 +100,15 @@ const AddProduct = () => {
             label="Rating"
             type="text"
             name="Rating"
+            onChange={handleOnChange}
+            variant="standard"
+          />
+          <TextField
+            sx={{ width: "75%", m: 1 }}
+            id="standard-basic"
+            label="Author"
+            type="text"
+            name="Author"
             onChange={handleOnChange}
             variant="standard"
           />
