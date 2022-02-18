@@ -10,6 +10,7 @@ import { Box } from "@mui/system";
 import Rating from "@mui/material/Rating";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
 
 const ProductCard = (props) => {
   const [value, setValue] = React.useState(2);
@@ -17,7 +18,7 @@ const ProductCard = (props) => {
   return (
     <>
       <Grid
-      sx={{ display: "flex", justifyContent: "center" }}
+        sx={{ display: "flex", justifyContent: "center" }}
         item
         xs={12}
         md={4}
@@ -80,7 +81,9 @@ const ProductCard = (props) => {
                   {product?.Name}
                 </Typography>
                 <Typography>
-                  <p style={{ fontSize: "13px", color: "#444" }}>{product?.Author}</p>
+                  <p style={{ fontSize: "13px", color: "#444" }}>
+                    {product?.Author}
+                  </p>
                 </Typography>
               </div>
 
@@ -127,16 +130,18 @@ const ProductCard = (props) => {
                     <span>Preview</span>
                   </Button>
                   {/* -----------------------font awesome icon --------------------*/}
-                  <FontAwesomeIcon
-                    classname="icon"
-                    style={{
-                      borderRadius: "2px",
-                      padding: "6px 13px",
-                      marginLeft: "15px",
-                    }}
-                    className="icon"
-                    icon={faShoppingCart}
-                  ></FontAwesomeIcon>
+                  <NavLink to={`/home/purchase/${product?._id}`}>
+                    <FontAwesomeIcon
+                      classname="icon"
+                      style={{
+                        borderRadius: "2px",
+                        padding: "6px 13px",
+                        marginLeft: "15px",
+                      }}
+                      className="icon"
+                      icon={faShoppingCart}
+                    ></FontAwesomeIcon>
+                  </NavLink>
                 </Box>
               </div>
             </Paper>
