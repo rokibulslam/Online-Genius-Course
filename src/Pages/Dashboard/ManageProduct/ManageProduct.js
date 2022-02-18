@@ -9,7 +9,7 @@ const ManageProduct = () => {
     const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
       setIsLoading(true);
-    fetch("http://localhost:5000/courses")
+    fetch("https://boiling-oasis-12763.herokuapp.com/courses")
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .finally(() => setIsLoading(false));
@@ -22,18 +22,20 @@ const ManageProduct = () => {
     );
       if (confirm) {
         setIsLoading(true)
-      axios.delete(`http://localhost:5000/course/delete/${id}`).then((res) => {
-        if (res.data.deletedCount) {
-          setIsLoading(false);
-          Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "Product has been Deleted",
-            showConfirmButton: false,
-            timer: 2000,
-          });
-        }
-      });
+      axios
+        .delete(`https://boiling-oasis-12763.herokuapp.com/course/delete/${id}`)
+        .then((res) => {
+          if (res.data.deletedCount) {
+            setIsLoading(false);
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Product has been Deleted",
+              showConfirmButton: false,
+              timer: 2000,
+            });
+          }
+        });
     }
   };
 

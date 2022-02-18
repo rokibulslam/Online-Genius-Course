@@ -8,12 +8,15 @@ import HomePageProduct from "../Products/HomePageProduct/HomePageProduct";
 import Pricing from "./Pricing/Pricing";
 
 import Reviews from "./Reviews/Reviews";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   return (
     <div>
       <Banner />
-
+      <HomePageProduct></HomePageProduct>
+      <Pricing></Pricing>
+      <Footer></Footer>
     </div>
   );
 };

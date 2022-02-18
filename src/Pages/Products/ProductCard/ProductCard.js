@@ -97,7 +97,7 @@ const ProductCard = (props) => {
                     setValue(newValue);
                   }}
                 ></Rating>
-                <Typography>(05)</Typography>
+                {/* <Typography>(05)</Typography> */}
               </Box>
 
               {/* ----------------------hr bar--------------------------------- */}
@@ -123,12 +123,12 @@ const ProductCard = (props) => {
                   </Typography>
                 </div>
                 <Box sx={{ ml: 5, display: "flex" }}>
-                  <Button
+                  {/* <Button
                     className="btn"
                     style={{ border: "1px solid #ecebed" }}
                   >
                     <span>Preview</span>
-                  </Button>
+                  </Button> */}
                   {/* -----------------------font awesome icon --------------------*/}
                   <NavLink to={`/home/purchase/${product?._id}`}>
                     <FontAwesomeIcon

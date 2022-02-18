@@ -12,6 +12,7 @@ import Review from "./Pages/Dashboard/Review/Review";
 import Home from "./Pages/Home/Home";
 import Navbar from "./Pages/Home/Navbar/Navbar";
 import Notfound from "./Pages/Notfound/Notfound";
+import AllProducts from "./Pages/Products/AllProducts/AllProducts";
 import Purchase from "./Pages/Purchase.js/Purchase";
 import Login from "./Pages/Shared/Login/Login";
 import PrivateRoute from "./Pages/Shared/PrivateRoute/PrivateRoute";
@@ -26,7 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-
+            <Route path="/explore" element={<AllProducts />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route

@@ -8,14 +8,14 @@ const ManageOrder = () => {
     const [update, setUpdate] = useState("");
     
     useEffect(() => {
-        fetch("http://localhost:5000/orders")
+        fetch("https://boiling-oasis-12763.herokuapp.com/orders")
           .then((res) => res.json())
           .then((data) => setOrders(data));
     }, [update])
     
     const handlePending = (id, text) => {
       axios
-        .put(`http://localhost:5000/order/status/${id}`, {
+        .put(`https://boiling-oasis-12763.herokuapp.com/order/status/${id}`, {
           status: text,
         })
         .then((res) => {
@@ -39,7 +39,9 @@ const ManageOrder = () => {
 
       if (confirm) {
         axios
-          .delete(`http://localhost:5000/order/delete/${id}`)
+          .delete(
+            `https://boiling-oasis-12763.herokuapp.com/order/delete/${id}`
+          )
           .then((res) => {
             if (res.data.deletedCount) {
               Swal.fire({

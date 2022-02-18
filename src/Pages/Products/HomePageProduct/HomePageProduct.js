@@ -10,7 +10,7 @@ const HomePageProduct = () => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
-    fetch("http://localhost:5000/courses")
+    fetch("https://boiling-oasis-12763.herokuapp.com/courses")
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .finally(() => setIsLoading(false));
@@ -26,7 +26,7 @@ const HomePageProduct = () => {
       )}
       <Box>
         <Grid container spacing={4}>
-          {products.slice(0, 6)?.map((product) => (
+          {products.slice(0, 3)?.map((product) => (
             <ProductCard
               key={product._id}
               product={product}

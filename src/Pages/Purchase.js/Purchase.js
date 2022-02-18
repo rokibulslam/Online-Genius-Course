@@ -30,7 +30,7 @@ const Purchase = () => {
   const { Name, Price, Category, Description, Image } = product;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/course/${id}`)
+    fetch(`https://boiling-oasis-12763.herokuapp.com/course/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
@@ -57,17 +57,19 @@ const Purchase = () => {
       customerName: user.displayName,
       email: user?.email,
     };
-    axios.post("http://localhost:5000/orders", order).then((res) => {
-      if (res.data.insertedId) {
-        Swal.fire({
-          position: "center",
-          icon: "success",
-          title: "Your order has been placed",
-          showConfirmButton: false,
-          timer: 2000,
-        });
-      }
-    });
+    axios
+      .post("https://boiling-oasis-12763.herokuapp.com/orders", order)
+      .then((res) => {
+        if (res.data.insertedId) {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Your order has been placed",
+            showConfirmButton: false,
+            timer: 2000,
+          });
+        }
+      });
     e.preventDefault();
   };
 
