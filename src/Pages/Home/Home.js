@@ -1,16 +1,19 @@
 import React from "react";
-import Footer from "../Footer/Footer";
+
 import Banner from "./Banner/Banner";
-import Cardd from "./Card/Cardd";
+import ProductCard from "../Products/ProductCard/ProductCard";
+
 import CourseDetails from "./CourseDetails/CourseDetails";
+import HomePageProduct from "../Products/HomePageProduct/HomePageProduct";
+import Pricing from "./Pricing/Pricing";
+
+import Reviews from "./Reviews/Reviews";
 
 const Home = () => {
   return (
     <div>
       <Banner />
-      <Cardd></Cardd>
-      <CourseDetails></CourseDetails>
-      <Footer></Footer>
+
     </div>
   );
 };
