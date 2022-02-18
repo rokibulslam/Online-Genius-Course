@@ -25,7 +25,7 @@ const Feedback = () => {
                 
 <Grid container spacing={2}>
 
-        <Grid  item xs={12} sm={6} md={4}>
+        <Grid className="space"  item xs={12} sm={6} md={4}>
                         <Box
                                 sx={{
                                     display: 'flex',
@@ -58,7 +58,7 @@ const Feedback = () => {
  </Box>
 
          </Grid>
-        <Grid  item  xs={12} sm={6} md={4}>
+        <Grid className="spacing"   item  xs={12} sm={6} md={4}>
                         <Box
                                 sx={{
                                     display: 'flex',
@@ -91,7 +91,7 @@ const Feedback = () => {
  </Box>
 
          </Grid>
-        <Grid  item  xs={12} sm={6} md={4}>
+        <Grid className="spacing"   item  xs={12} sm={6} md={4}>
                         <Box
                                 sx={{
                                     display: 'flex',

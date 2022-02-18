@@ -17,10 +17,10 @@
 
 
 
-.feedback{
+/* .feedback{
     height: 280px;
 
-}
+} */
 
 
 @media only screen and (max-width: 1200px){
@@ -31,11 +31,24 @@
     }
     
 }
+@media only screen and (max-width: 700px){
+	/*Big smartphones [426px -> 600px]*/
+    .feedback{
+        height: 550px;
+
+    }
+    .space{
+        margin-bottom:500px;
+    }
+}
 @media only screen and (max-width: 600px){
 	/*Big smartphones [426px -> 600px]*/
     .feedback{
-        height: 530px;
+        height: 550px;
 
+    }
+    .space{
+        margin-bottom:500px;
     }
 }
 @media only screen and (max-width: 425px){
@@ -43,5 +56,8 @@
     .feedback{
         height: 550px;
 
+    }
+    .space{
+        margin-bottom:500px;
     }
 }
