@@ -84,47 +84,56 @@ function Dashboard(props) {
               </Button>
             </NavLink>
           </ListItem>
-          
-            <ListItem>
-              <NavLink
-                style={{ textDecoration: "none" }}
-                to="/dashboard/addProduct"
-              >
-                <span style={{ fontSize: "20px", paddingRight: "2px" }}>
-                  <FcAddDatabase />
-                </span>
-                <Button variant="text" style={{ color: "white" }}>
-                  Add a Product
-                </Button>
-              </NavLink>
-            </ListItem>
-            <ListItem>
-              <NavLink
-                style={{ textDecoration: "none" }}
-                to="/dashboard/manageProduct"
-              >
-                <span style={{ fontSize: "20px", paddingRight: "2px" }}>
-                  <FcHeatMap />
-                </span>
-                <Button variant="text" style={{ color: "white" }}>
-                  Products
-                </Button>
-              </NavLink>
-            </ListItem>
-            <ListItem>
-              <NavLink
-                style={{ textDecoration: "none" }}
-                to="/dashboard/orders"
-              >
-                <span style={{ fontSize: "20px", paddingRight: "2px" }}>
-                  <FcHeatMap />
-                </span>
-                <Button variant="text" style={{ color: "white" }}>
-                  Manage Order
-                </Button>
-              </NavLink>
-            </ListItem>
-          
+
+          <ListItem>
+            <NavLink
+              style={{ textDecoration: "none" }}
+              to="/dashboard/addProduct"
+            >
+              <span style={{ fontSize: "20px", paddingRight: "2px" }}>
+                <FcAddDatabase />
+              </span>
+              <Button variant="text" style={{ color: "white" }}>
+                Add a Product
+              </Button>
+            </NavLink>
+          </ListItem>
+          <ListItem>
+            <NavLink
+              style={{ textDecoration: "none" }}
+              to="/dashboard/manageProduct"
+            >
+              <span style={{ fontSize: "20px", paddingRight: "2px" }}>
+                <FcHeatMap />
+              </span>
+              <Button variant="text" style={{ color: "white" }}>
+                Products
+              </Button>
+            </NavLink>
+          </ListItem>
+          <ListItem>
+            <NavLink style={{ textDecoration: "none" }} to="/dashboard/orders">
+              <span style={{ fontSize: "20px", paddingRight: "2px" }}>
+                <FcHeatMap />
+              </span>
+              <Button variant="text" style={{ color: "white" }}>
+                Manage Order
+              </Button>
+            </NavLink>
+          </ListItem>
+          <ListItem>
+            <NavLink
+              style={{ textDecoration: "none" }}
+              to="/dashboard/myOrders"
+            >
+              <span style={{ fontSize: "20px", paddingRight: "2px" }}>
+                <FcHeatMap />
+              </span>
+              <Button variant="text" style={{ color: "white" }}>
+                MY Order
+              </Button>
+            </NavLink>
+          </ListItem>
         </Box>
 
         <Box>
@@ -257,7 +266,7 @@ function Dashboard(props) {
       >
         <Toolbar />
         
-         <MyOrder></MyOrder>
+        
         <Outlet></Outlet>
       </Box>
     </Box>
