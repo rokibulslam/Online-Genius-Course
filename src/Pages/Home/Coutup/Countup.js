@@ -11,6 +11,7 @@ import download from "../../../Images/download.png"
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
 
 
 const Countup = () => {
@@ -46,7 +47,7 @@ const Countup = () => {
 
 
 {/*---------------- count up -----------*/}
-                <CountUp  start={2000} end={2025} delay={0} duration={2}>
+                {/* <CountUp redraw={true}  start={2000} end={2025} delay={0} duration={2}>
                             {({ countUpRef }) => (
                                 <div style={{display:"flex",alignItems:"center"}}>
                                 <span style={{fontWeight:"bold",color:"#242f6c",fontSize:"35px",margin:"0 3px"}} ref={countUpRef}></span>
@@ -55,7 +56,19 @@ const Countup = () => {
                                 </Typography>
                                 </div>
                             )}
-                </CountUp>
+                </CountUp> */}
+    <CountUp start={2000} end={2025} redraw={true}>
+        {({ countUpRef, start }) => (
+            <VisibilitySensor onChange={start} delayedCall>
+                <div style={{display:"flex",alignItems:"center"}}>
+                                <span style={{fontWeight:"bold",color:"#242f6c",fontSize:"35px",margin:"0 3px"}} ref={countUpRef}></span>
+                                <Typography variant="h3">
+                                    +
+                                </Typography>
+                                </div>
+            </VisibilitySensor>
+        )}
+    </CountUp>
 
 
                 <p style={{fontSize:"16px"}}>Amazing Products</p>
@@ -89,16 +102,18 @@ const Countup = () => {
 
 
 {/*---------------- count up -----------*/}
-                <CountUp  start={630100} end={630168} delay={0} duration={2}>
-                            {({ countUpRef }) => (
-                                <div style={{display:"flex",alignItems:"center"}}>
+<CountUp start={2000} end={2025} redraw={true}>
+        {({ countUpRef, start }) => (
+            <VisibilitySensor onChange={start} delayedCall>
+                <div style={{display:"flex",alignItems:"center"}}>
                                 <span style={{fontWeight:"bold",color:"#242f6c",fontSize:"35px",margin:"0 3px"}} ref={countUpRef}></span>
                                 <Typography variant="h3">
                                     +
                                 </Typography>
                                 </div>
-                            )}
-                </CountUp>
+            </VisibilitySensor>
+        )}
+    </CountUp>
 
 
                 <p style={{fontSize:"16px"}}>Total Downloads</p>
@@ -133,16 +148,18 @@ const Countup = () => {
 
 
 {/*---------------- count up -----------*/}
-                <CountUp  start={35600} end={35620} delay={0} duration={2}>
-                            {({ countUpRef }) => (
-                                <div style={{display:"flex",alignItems:"center"}}>
+<CountUp start={2000} end={2025} redraw={true}>
+        {({ countUpRef, start }) => (
+            <VisibilitySensor onChange={start} delayedCall>
+                <div style={{display:"flex",alignItems:"center"}}>
                                 <span style={{fontWeight:"bold",color:"#242f6c",fontSize:"35px",margin:"0 3px"}} ref={countUpRef}></span>
                                 <Typography variant="h3">
                                     +
                                 </Typography>
                                 </div>
-                            )}
-                </CountUp>
+            </VisibilitySensor>
+        )}
+    </CountUp>
 
 
                 <p style={{fontSize:"16px"}}>Happy Customers</p>
@@ -174,16 +191,18 @@ const Countup = () => {
 
             <Box >
 
-                <CountUp  start={0} end={100} delay={0} duration={2}>
-                            {({ countUpRef }) => (
-                                <div style={{display:"flex",alignItems:"center"}}>
+            <CountUp start={2000} end={2025} redraw={true}>
+        {({ countUpRef, start }) => (
+            <VisibilitySensor onChange={start} delayedCall>
+                <div style={{display:"flex",alignItems:"center"}}>
                                 <span style={{fontWeight:"bold",color:"#242f6c",fontSize:"35px",margin:"0 3px"}} ref={countUpRef}></span>
                                 <Typography variant="h3">
                                     +
                                 </Typography>
                                 </div>
-                            )}
-                </CountUp>
+            </VisibilitySensor>
+        )}
+    </CountUp>
 
 
                 <p style={{fontSize:"16px"}}>Team Members</p>
