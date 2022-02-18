@@ -1,5 +1,5 @@
 import React from "react";
-import AddProduct from "../Dashboard/AddProduct/AddProduct";
+
 import Banner from "./Banner/Banner";
 import ProductCard from "../Products/ProductCard/ProductCard";
 
@@ -13,9 +13,7 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <HomePageProduct></HomePageProduct>
-      <Pricing></Pricing>
-      <Reviews></Reviews>
+
     </div>
   );
 };
