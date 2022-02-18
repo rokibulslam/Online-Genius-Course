@@ -8,19 +8,16 @@ const ManageOrder = () => {
     const [update, setUpdate] = useState("");
     
     useEffect(() => {
-        fetch("https://immense-wildwood-96183.herokuapp.com/orders")
+        fetch("http://localhost:5000/orders")
           .then((res) => res.json())
           .then((data) => setOrders(data));
     }, [update])
     
     const handlePending = (id, text) => {
       axios
-        .put(
-          `https://immense-wildwood-96183.herokuapp.com/order/status/${id}`,
-          {
-            status: text,
-          }
-        )
+        .put(`http://localhost:5000/order/status/${id}`, {
+          status: text,
+        })
         .then((res) => {
           if (res.data.acknowledged) {
             Swal.fire({
@@ -42,9 +39,7 @@ const ManageOrder = () => {
 
       if (confirm) {
         axios
-          .delete(
-            `https://immense-wildwood-96183.herokuapp.com/order/delete/${id}`
-          )
+          .delete(`http://localhost:5000/order/delete/${id}`)
           .then((res) => {
             if (res.data.deletedCount) {
               Swal.fire({

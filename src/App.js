@@ -6,6 +6,7 @@ import AuthProvider from "./Context/AuthProvider";
 import AddProduct from "./Pages/Dashboard/AddProduct/AddProduct";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import ManageOrder from "./Pages/Dashboard/ManageOrder/ManageOrder";
+import ManageProduct from "./Pages/Dashboard/ManageProduct/ManageProduct";
 import MyOrder from "./Pages/Dashboard/MyOrder/MyOrder";
 import Review from "./Pages/Dashboard/Review/Review";
 import Home from "./Pages/Home/Home";
@@ -51,6 +52,10 @@ function App() {
               <Route path="/dashboard/myOrders" element={<MyOrder />}></Route>
               <Route path="/dashboard/orders" element={<ManageOrder />}></Route>
               <Route path="/dashboard/review" element={<Review />}></Route>
+              <Route
+                path="/dashboard/manageProduct"
+                element={<ManageProduct />}
+              ></Route>
             </Route>
             <Route path="*" element={<Notfound></Notfound>}></Route>
           </Routes>

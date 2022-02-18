@@ -27,7 +27,7 @@ import MyOrder from "../MyOrder/MyOrder";
 import { green } from "@mui/material/colors";
 import { height } from "@mui/system";
 import profile from "../../../Image/profile.png";
-
+import './Dasboard.css'
 const drawerWidth = 200;
 
 function Dashboard(props) {
@@ -154,7 +154,7 @@ function Dashboard(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex"}}>
+    <Box className="dashboard-main" sx={{ display: "flex"}}>
       <CssBaseline />
       <AppBar
         position="fixed"
