@@ -12,7 +12,7 @@ import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
-
+import "./Countup.css"
 
 const Countup = () => {
     return (
@@ -20,9 +20,9 @@ const Countup = () => {
 
         <main>
             <h1>Count section (Should be remove this line)</h1>
-            <div style={{padding:"100px",display:"flex",justifyContent:"space-between",background:"#f9fbfb"}}>
+            <div className="number" style={{display:"flex",justifyContent:"space-between",background:"#f9fbfb"}}>
                 
-<Grid container spacing={2}>
+<Grid className="alignment" container spacing={2}>
 
         <Grid item   xs={12} sm={6}  lg={3}>
                         <Box
