@@ -5,12 +5,12 @@ const Footer = () => {
     return (
         <footer className=' text-white pt-4 pb-4' style={{ backgroundColor: '#00ACD6' }}>
             <div className="container text-center text-md-left" >
-                <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 text-center text-md-left">
+                <div className="row row-cols-2 row-cols-md-2 row-cols-lg-4 text-center text-md-left">
                     <div className="col mx-auto mt-3 mx-auto">
                         {/* <h5 className='text-uppercase mb-4 font-weight-bold text-white'>Edefy </h5> */}
-                        <img className='text-white pb-4 ' src="https://i.ibb.co/N3Y9VVw/logo.png" alt="" />
+                        <img className='text-white pb-4 w-100' src="https://i.ibb.co/N3Y9VVw/logo.png" alt="" />
                         <p>Build and Earn with your online store with lots of cool and exclusive features</p>
-                        <div className='d-flex justify-content-between container mt-4'>
+                        <div className='d-flex justify-content-evenly container mt-4'>
                             <p>
                                 <Link to='/' className='text-white text-decoration-none'><i className='fab fa-facebook-f'></i></Link>
                             </p>
