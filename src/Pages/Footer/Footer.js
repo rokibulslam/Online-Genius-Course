@@ -57,7 +57,7 @@ const Footer = () => {
                     </div>
                     <div className="col mx-auto mt-3 mx-auto">
                         <h5 className='text-uppercase mb-4 font-weight-bold text-white'> Market Earning </h5>
-                        <p>online store with lots of cool and exclusive features Edefy</p>
+                        <p>online store with lots of cool and exclusive features Online Genius Course</p>
                         <div className='d-flex '>
                             <div className='px-5'>
                                 <p>Items Sold</p>
