@@ -10,6 +10,7 @@ import download from "../../../Images/download.png"
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import CountUp from 'react-countup';
+import "./Features.css"
 
 const Features = () => {
     return (
@@ -20,7 +21,7 @@ const Features = () => {
                 
 <Grid container spacing={2}>
 
-        <Grid item xs={6} md={4}>
+        <Grid item xs={12} sm={6} md={4}>
                         <Box
                                 sx={{
                                     display: 'flex',
@@ -28,13 +29,13 @@ const Features = () => {
                                     '& > :not(style)': {
                                     m: 1,
                                     width: 262,
-                                    height: 245,
+                                    
                                     },
                                 }}
                                 >
     {/*------------------------ card 1 ---------------------*/}
 
-    <Paper sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{boxShadow:"5px 5px 23px 0px rgba(0,0,0,0.8)",height:"376px",width:"392px"}}>
+    <Paper className="feature" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{boxShadow:"5px 5px 23px 0px rgba(0,0,0,0.8)",width:"392px"}}>
         <Typography sx={{textAlign:"center"}}  variant="h3">
 
             <img style={{padding:16,marginLeft:"25px",height:"90px",width:"90px"}} src={security} alt="" />
@@ -50,7 +51,7 @@ const Features = () => {
  </Box>
 
          </Grid>
-        <Grid item xs={6} md={4}>
+        <Grid item xs={12} sm={6} md={4}>
                         <Box
                                 sx={{
                                     display: 'flex',
@@ -58,13 +59,13 @@ const Features = () => {
                                     '& > :not(style)': {
                                     m: 1,
                                     width: 262,
-                                    height: 245,
+                                    
                                     },
                                 }}
                                 >
     {/*------------------------ card 2 ---------------------*/}
 
-    <Paper sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{boxShadow:"5px 5px 23px 0px rgba(0,0,0,0.8)",height:"376px",width:"392px"}}>
+    <Paper className="feature" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{boxShadow:"5px 5px 23px 0px rgba(0,0,0,0.8)",width:"392px"}}>
         <Typography sx={{textAlign:"center"}}  variant="h3">
 
         <img style={{padding:"16px",height:"90px",width:"90px"}} src={support} alt="" />
@@ -80,7 +81,7 @@ const Features = () => {
  </Box>
 
          </Grid>
-        <Grid item xs={6} md={4}>
+        <Grid item xs={12} sm={6} md={4}>
                         <Box
                                 sx={{
                                     display: 'flex',
@@ -88,12 +89,12 @@ const Features = () => {
                                     '& > :not(style)': {
                                     m: 1,
                                     width: 262,
-                                    height: 245,
+                                   
                                     },
                                 }}
                                 >
   {/*------------------------ card 3 ---------------------*/}
-    <Paper sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{boxShadow:"5px 5px 23px 0px rgba(0,0,0,0.8)",height:"376px",width:"392px"}}>
+    <Paper className="feature" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{boxShadow:"5px 5px 23px 0px rgba(0,0,0,0.8)",width:"392px"}}>
         <Typography sx={{textAlign:"center"}}  variant="h3">
 
         <img style={{padding:16,height:"90px",width:"90px"}} src={quality} alt="" />

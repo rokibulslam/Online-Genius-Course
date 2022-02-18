@@ -1,0 +1,25 @@
+/* .feature{
+    height: 675px;
+} */
+@media only screen and (max-width: 1200px){
+    .feature{
+        height: 500px;
+        margin-bottom: 20px;
+
+    }
+    
+}
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+    .feature{
+        height: 530px;
+
+    }
+}
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+    .feature{
+        height: 550px;
+
+    }
+}

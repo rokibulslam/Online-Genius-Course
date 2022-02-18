@@ -14,3 +14,34 @@
     /* height:75px;
     width: 75px; */
 }
+
+
+
+.feedback{
+    height: 280px;
+
+}
+
+
+@media only screen and (max-width: 1200px){
+    .feedback{
+        height: 500px;
+        margin-bottom: 20px;
+
+    }
+    
+}
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+    .feedback{
+        height: 530px;
+
+    }
+}
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+    .feedback{
+        height: 550px;
+
+    }
+}

@@ -25,7 +25,7 @@ const Feedback = () => {
                 
 <Grid container spacing={2}>
 
-        <Grid item xs={6} md={4}>
+        <Grid  item xs={12} sm={6} md={4}>
                         <Box
                                 sx={{
                                     display: 'flex',
@@ -33,13 +33,13 @@ const Feedback = () => {
                                     '& > :not(style)': {
                                     m: 1,
                                     width: 262,
-                                    height: 245,
+                                   
                                     },
                                 }}
                                 >
     {/*------------------------ card 1 ---------------------*/}
 
-    <Paper sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{borderRadius:"5px",boxShadow:"5px 5px 23px 0px rgba(0,0,0,0.8)",height:"280px",width:"480px"}}>
+    <Paper className="feedback" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{borderRadius:"5px",boxShadow:"5px 5px 23px 0px rgba(0,0,0,0.8)",width:"480px"}}>
         <Typography sx={{textAlign:"center"}}  variant="h3">
 
         <div className='parents_img' style={{textAlign:"center",height:"93px",width:"93px"}}>
@@ -58,7 +58,7 @@ const Feedback = () => {
  </Box>
 
          </Grid>
-        <Grid item xs={6} md={4}>
+        <Grid  item  xs={12} sm={6} md={4}>
                         <Box
                                 sx={{
                                     display: 'flex',
@@ -66,13 +66,13 @@ const Feedback = () => {
                                     '& > :not(style)': {
                                     m: 1,
                                     width: 262,
-                                    height: 245,
+                                   
                                     },
                                 }}
                                 >
     {/*------------------------ card 2 ---------------------*/}
 
-    <Paper sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{borderRadius:"5px",backgroundColor:"#eaf7f7",boxShadow:"5px 5px 23px 0px rgba(0,0,0,0.8)",height:"280px",width:"480px",borderBottom:"6px solid #00bfd6"}}>
+    <Paper className="feedback" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{borderRadius:"5px",backgroundColor:"#eaf7f7",boxShadow:"5px 5px 23px 0px rgba(0,0,0,0.8)",width:"480px",borderBottom:"6px solid #00bfd6"}}>
         <Typography sx={{textAlign:"center"}}  variant="h3">
 
         <div className='parents_img' style={{textAlign:"center",height:"93px",width:"93px"}}>
@@ -91,7 +91,7 @@ const Feedback = () => {
  </Box>
 
          </Grid>
-        <Grid item xs={6} md={4}>
+        <Grid  item  xs={12} sm={6} md={4}>
                         <Box
                                 sx={{
                                     display: 'flex',
@@ -99,12 +99,11 @@ const Feedback = () => {
                                     '& > :not(style)': {
                                     m: 1,
                                     width: 262,
-                                    height: 245,
                                     },
                                 }}
                                 >
   {/*------------------------ card 3 ---------------------*/}
-    <Paper sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{borderRadius:"5px",boxShadow:"5px 5px 23px 0px rgba(0,0,0,0.8)",height:"280px",width:"480px"}}>
+    <Paper className="feedback" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{borderRadius:"5px",boxShadow:"5px 5px 23px 0px rgba(0,0,0,0.8)",width:"480px"}}>
         <Typography sx={{textAlign:"center"}}  variant="h3">
 
         <div className='parents_img' style={{textAlign:"center",height:"93px",width:"93px"}}>
