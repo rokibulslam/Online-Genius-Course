@@ -5,10 +5,10 @@ const Footer = () => {
     return (
         <footer className=' text-white pt-4 pb-4' style={{ backgroundColor: '#00ACD6' }}>
             <div className="container text-center text-md-left" >
-                <div className="row row-cols-2 row-cols-md-2 row-cols-lg-4 text-center text-md-left">
+                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 text-center text-md-left">
                     <div className="col mx-auto mt-3 mx-auto">
                         {/* <h5 className='text-uppercase mb-4 font-weight-bold text-white'>Edefy </h5> */}
-                        <img className='text-white pb-4 w-100' src="https://i.ibb.co/N3Y9VVw/logo.png" alt="" />
+                        <img className='text-white pb-4 w-75' src="https://i.ibb.co/N3Y9VVw/logo.png" alt="" />
                         <p>Build and Earn with your online store with lots of cool and exclusive features</p>
                         <div className='d-flex justify-content-evenly container mt-4'>
                             <p>
@@ -58,7 +58,7 @@ const Footer = () => {
                     <div className="col mx-auto mt-3 mx-auto">
                         <h5 className='text-uppercase mb-4 font-weight-bold text-white'> Market Earning </h5>
                         <p>online store with lots of cool and exclusive features Online Genius Course</p>
-                        <div className='d-flex '>
+                        <div className='d-flex justify-content-around'>
                             <div className='px-5'>
                                 <p>Items Sold</p>
                                 <h5>3400</h5>
@@ -69,6 +69,10 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+                <hr />
+                <div className='container'>
+                    <small className="text-white"> &#169; 2022  Online Genius Course</small>
                 </div>
             </div>
         </footer>
