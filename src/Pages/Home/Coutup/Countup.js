@@ -23,7 +23,7 @@ const Countup = () => {
                 
 <Grid className="alignment" container spacing={2}>
 
-        <Grid item   xs={12} sm={6}  lg={3}>
+        <Grid  item   xs={12} sm={12}  md={6}   lg={3}>
                         <Box
                                 sx={{
                                     display: 'flex',
@@ -37,7 +37,7 @@ const Countup = () => {
                                 }}
                                 >
   
-    <Paper sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{height:"268px",width:"292px"}}>
+    <Paper className="respo" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{height:"268px",width:"292px"}}>
         <Typography sx={{padding:16,textAlign:"center"}}  variant="h3">
 
             <img style={{marginLeft:"25px",height:"60px",width:"60px"}} src={network} alt="" />
@@ -79,7 +79,7 @@ const Countup = () => {
  </Box>
 
          </Grid>
-        <Grid item  xs={12} sm={6}  lg={3}>
+        <Grid  item  xs={12} sm={12}  md={6}   lg={3}>
                         <Box
                                 sx={{
                                     display: 'flex',
@@ -93,7 +93,7 @@ const Countup = () => {
                                 }}
                                 >
   
-    <Paper sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{height:"268px",width:"292px"}}>
+    <Paper className="respo" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{height:"268px",width:"292px"}}>
         <Typography sx={{padding:16,textAlign:"center"}}  variant="h3">
 
         <img style={{height:"60px",width:"60px"}} src={download} alt="" />
@@ -125,7 +125,7 @@ const Countup = () => {
  </Box>
 
          </Grid>
-        <Grid item  xs={12} sm={6}  lg={3}>
+        <Grid  item  xs={12} sm={12}  md={6}   lg={3}>
                         <Box
                                 sx={{
                                     display: 'flex',
@@ -139,7 +139,7 @@ const Countup = () => {
                                 }}
                                 >
   
-    <Paper sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{height:"268px",width:"292px"}}>
+    <Paper className="respo" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{height:"268px",width:"292px"}}>
         <Typography sx={{padding:16,textAlign:"center"}}  variant="h3">
 
         <img style={{height:"60px",width:"60px"}} src={smile} alt="" />
@@ -172,8 +172,8 @@ const Countup = () => {
  </Box>
 
          </Grid>
-        <Grid item  xs={12} sm={6}  lg={3}>
-                        <Box
+        <Grid  item  xs={12} sm={12}  md={6}   lg={3}>
+                        <Box 
                                 sx={{
                                     display: 'flex',
                                     flexWrap: 'wrap',
@@ -186,7 +186,7 @@ const Countup = () => {
                                 }}
                                 >
   
-    <Paper sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{height:"268px",width:"292px"}}>
+    <Paper className="respo" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{height:"268px",width:"292px"}}>
         <Typography sx={{padding:16,textAlign:"center"}}  variant="h3">
 
             <img style={{height:"60px",width:"60px"}} src={member} alt="" />
