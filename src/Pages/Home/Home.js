@@ -18,11 +18,11 @@ const Home = () => {
       <Banner />
       {/* <Cardd></Cardd> */}
       <CourseDetails></CourseDetails>
-      <Countup></Countup>
-      <Features></Features>
       <Feedback></Feedback>
       <HomePageProduct></HomePageProduct>
       <Pricing></Pricing>
+      <Countup></Countup>
+      <Features></Features>
       <Footer></Footer>
     </div>
   );
