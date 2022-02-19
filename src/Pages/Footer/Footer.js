@@ -25,21 +25,21 @@ const Footer = () => {
                   <a
                     href="https://www.facebook.com/"
                     target="_blank"
-                    className="fab fa-facebook-f fa-3x text-warning text-decoration-none"
+                    className="fab fa-facebook-f fa-2x text-white text-decoration-none"
                   ></a>
                 </p>
                 <p className="text-white text-decoration-none">
                   <a
                     href="https://twitter.com/"
                     target="_blank"
-                    className="fab fa-twitter fa-3x text-warning text-decoration-none"
+                    className="fab fa-twitter fa-2x text-white text-decoration-none"
                   ></a>
                 </p>
                 <p className="text-white text-decoration-none">
                   <a
                     href="https://www.instagram.com/?hl=en"
                     target="_blank"
-                    className="fab fa-instagram fa-3x text-warning text-decoration-none"
+                    className="fab fa-instagram fa-2x text-white text-decoration-none"
                   ></a>
                 </p>
               </div>
@@ -96,23 +96,34 @@ const Footer = () => {
                 </Link>
               </p>
             </div>
-            <div className="col mx-auto mt-3 mx-auto">
+            <div className="col  mt-3">
               <h5 className="text-uppercase mb-4 font-weight-bold text-white">
                 {" "}
                 Market Earning{" "}
               </h5>
-              <p>online store with lots of cool and exclusive features Edefy</p>
-              <div className="d-flex ">
-                <div className="px-5">
-                  <p>Items Sold</p>
-                  <h5>3400</h5>
-                </div>
-                <div>
-                  <p>Total Earning</p>
-                  <h5>20000</h5>
+              <div>
+                <p className="">
+                  online store with lots of cool and exclusive features Edefy
+                </p>
+                <div className="d-flex justify-content-around">
+                  <div className="">
+                    <p>Items Sold</p>
+                    <h5>3400</h5>
+                  </div>
+                  <div>
+                    <p>Total Earning</p>
+                    <h5>20000</h5>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+          <hr />
+          <div className="container">
+            <small className="text-white">
+              {" "}
+              &#169; 2022 Online Genius Course
+            </small>
           </div>
         </div>
       </footer>
