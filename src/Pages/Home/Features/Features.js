@@ -16,7 +16,6 @@ const Features = () => {
     return (
         <>
           <main>
-            <h1>Count section (Should be remove this line)</h1>
             <div style={{padding:"100px",display:"flex",justifyContent:"space-between",background:"#f9fbfb"}}>
                 
 <Grid container spacing={2}>

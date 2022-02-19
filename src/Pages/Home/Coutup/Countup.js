@@ -19,7 +19,6 @@ const Countup = () => {
         <>
 
         <main>
-            <h1>Count section (Should be remove this line)</h1>
             <div className="number" style={{display:"flex",justifyContent:"space-between",background:"#f9fbfb"}}>
                 
 <Grid className="alignment" container spacing={2}>

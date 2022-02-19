@@ -14,9 +14,8 @@ const Feedback = () => {
     return (
         <>
           <main>
-            <h1>Count section (Should be remove this line)</h1>
             <div style={{padding:"100px",display:"flex",justifyContent:"space-between",flexDirection:"column"}}>
-                <div style={{marginBottom:"60px"}}>
+                <div style={{marginBottom:"60px",textAlign:"center"}}>
                 <h1 style={{color:"#242f6c"}}>What People Say</h1>
                 <p style={{color:"#9c8a78"}}>Build and Earn with your online store with lots of cool and exclusive features bundled with Edefy!</p>
                 <p style={{color:"#9c8a78"}}> features bundled with Edefy!</p>
