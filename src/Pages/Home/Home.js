@@ -19,9 +19,9 @@ const Home = () => {
       {/* <Cardd></Cardd> */}
       <CourseDetails></CourseDetails>
       <HomePageProduct></HomePageProduct>
-      <Countup></Countup>
       <Features></Features>
       <Feedback></Feedback>
+      <Countup></Countup>
       <Pricing></Pricing>
       <Footer></Footer>
     </div>
