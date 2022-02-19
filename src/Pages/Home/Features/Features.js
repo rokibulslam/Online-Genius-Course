@@ -16,9 +16,9 @@ const Features = () => {
     return (
         <>
           <main>
-            <div style={{padding:"100px",display:"flex",justifyContent:"space-between",background:"#f9fbfb"}}>
+            <div className="featurePadding" style={{display:"flex",justifyContent:"space-between",background:"#f9fbfb"}}>
                 
-<Grid container spacing={2}>
+<Grid container >
 
         <Grid item xs={12} sm={6} md={4}>
                         <Box
@@ -26,7 +26,7 @@ const Features = () => {
                                     display: 'flex',
                                     flexWrap: 'wrap',
                                     '& > :not(style)': {
-                                    m: 1,
+                                    m:3,
                                     width: 262,
                                     
                                     },
@@ -56,7 +56,7 @@ const Features = () => {
                                     display: 'flex',
                                     flexWrap: 'wrap',
                                     '& > :not(style)': {
-                                    m: 1,
+                                    m: 3,
                                     width: 262,
                                     
                                     },
@@ -86,7 +86,7 @@ const Features = () => {
                                     display: 'flex',
                                     flexWrap: 'wrap',
                                     '& > :not(style)': {
-                                    m: 1,
+                                    m: 3,
                                     width: 262,
                                    
                                     },

@@ -21,7 +21,7 @@ const Countup = () => {
         <main>
             <div className="number" style={{display:"flex",justifyContent:"space-between",background:"#f9fbfb"}}>
                 
-<Grid className="alignment" container spacing={2}>
+<Grid className="alignment" container >
 
         <Grid  item   xs={12} sm={12}  md={6}   lg={3}>
                         <Box
@@ -29,7 +29,7 @@ const Countup = () => {
                                     display: 'flex',
                                     flexWrap: 'wrap',
                                     '& > :not(style)': {
-                                    m: 1,
+                                    m: 3,
                                     width: 262,
                                     height: 245,
                                     gap:2
@@ -37,10 +37,10 @@ const Countup = () => {
                                 }}
                                 >
   
-    <Paper className="respo" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{height:"268px",width:"292px"}}>
-        <Typography sx={{padding:16,textAlign:"center"}}  variant="h3">
+    <Paper className="respo" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   >
+        <Typography sx={{textAlign:"center"}}  variant="h3">
 
-            <img style={{marginLeft:"25px",height:"60px",width:"60px"}} src={network} alt="" />
+            <img style={{height:"60px",width:"60px"}} src={network} alt="" />
 
             <Box >
 
@@ -85,7 +85,7 @@ const Countup = () => {
                                     display: 'flex',
                                     flexWrap: 'wrap',
                                     '& > :not(style)': {
-                                    m: 1,
+                                    m:3,
                                     width: 262,
                                     height: 245,
                                     gap:2
@@ -93,8 +93,8 @@ const Countup = () => {
                                 }}
                                 >
   
-    <Paper className="respo" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{height:"268px",width:"292px"}}>
-        <Typography sx={{padding:16,textAlign:"center"}}  variant="h3">
+    <Paper className="respo" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   >
+        <Typography sx={{textAlign:"center"}}  variant="h3">
 
         <img style={{height:"60px",width:"60px"}} src={download} alt="" />
 
@@ -131,7 +131,7 @@ const Countup = () => {
                                     display: 'flex',
                                     flexWrap: 'wrap',
                                     '& > :not(style)': {
-                                    m: 1,
+                                    m: 3,
                                     width: 262,
                                     height: 245,
                                     gap:2
@@ -139,8 +139,8 @@ const Countup = () => {
                                 }}
                                 >
   
-    <Paper className="respo" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{height:"268px",width:"292px"}}>
-        <Typography sx={{padding:16,textAlign:"center"}}  variant="h3">
+    <Paper className="respo" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}  >
+        <Typography sx={{textAlign:"center"}}  variant="h3">
 
         <img style={{height:"60px",width:"60px"}} src={smile} alt="" />
 
@@ -178,7 +178,7 @@ const Countup = () => {
                                     display: 'flex',
                                     flexWrap: 'wrap',
                                     '& > :not(style)': {
-                                    m: 1,
+                                    m: 3,
                                     width: 262,
                                     height: 245,
                                     gap:2
@@ -186,8 +186,8 @@ const Countup = () => {
                                 }}
                                 >
   
-    <Paper className="respo" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}   style={{height:"268px",width:"292px"}}>
-        <Typography sx={{padding:16,textAlign:"center"}}  variant="h3">
+    <Paper className="respo" sx={{ display: 'flex' , justifyContent: 'center',alignItems: 'center',flexDirection: 'column' }}  >
+        <Typography sx={{textAlign:"center"}}  variant="h3">
 
             <img style={{height:"60px",width:"60px"}} src={member} alt="" />
 {/*---------------- count up -----------*/}

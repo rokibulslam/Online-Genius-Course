@@ -1,11 +1,17 @@
-
-
-
-@media only screen and (max-width: 1200px){
+@media only screen and (min-width: 1200px){
     .number{
         padding:100px;
 
     }
+    
+}
+
+
+@media only screen and (max-width: 1200px){
+    /* .number{
+        padding:40px;
+
+    } */
     
 }
 @media only screen and (max-width: 800px){
@@ -14,17 +20,33 @@
         margin :0 20% !important;;
     } */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 460px){
    .alignment{
-       margin :0 -17% !important;
-       width: 200px;
+       margin-left:40px !important;
+      
    }
-   .respo{
+   /* .respo{
        width: 220px !important;
    }
-  
+   */
     
 }
+
+
+/* 
 @media only screen and (max-width: 300px){
    .alignment{
        margin :0 -40% !important;
@@ -32,5 +54,5 @@
    .respo{
     width: 200px !important;
 }
-    
-}
+
+}  */
