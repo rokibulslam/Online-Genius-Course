@@ -94,7 +94,7 @@ function Dashboard(props) {
                 <FcAddDatabase />
               </span>
               <Button variant="text" style={{ color: "white" }}>
-                Add a Product
+                Add a Course
               </Button>
             </NavLink>
           </ListItem>
@@ -107,7 +107,7 @@ function Dashboard(props) {
                 <FcHeatMap />
               </span>
               <Button variant="text" style={{ color: "white" }}>
-                Products
+                Courses
               </Button>
             </NavLink>
           </ListItem>
