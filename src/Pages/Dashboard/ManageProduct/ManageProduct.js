@@ -88,7 +88,7 @@ const ManageProduct = () => {
                         onClick={() => handleDeleteFood(product._id)}
                         className="btn btn-warning"
                       >
-                        Delete Apartment
+                        Delete Course
                       </button>
                     </div>
                   </Card.Body>

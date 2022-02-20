@@ -23,6 +23,7 @@ const Home = () => {
       <Feedback></Feedback>
       <Countup></Countup>
       <Pricing></Pricing>
+      <Reviews></Reviews>
       <Footer></Footer>
     </div>
   );

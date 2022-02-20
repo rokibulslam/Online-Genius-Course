@@ -15,6 +15,8 @@ import VisibilitySensor from "react-visibility-sensor";
 import "./Countup.css";
 
 const Countup = () => {
+  
+  
   return (
     <>
       <main>
