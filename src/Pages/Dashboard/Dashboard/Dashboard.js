@@ -57,8 +57,8 @@ function Dashboard(props) {
           alignItems: "center",
         }}
       >
-        <span style={{ color: "red" }}>MY</span>HOM
-        <span style={{ color: "red" }}>E</span>
+        <span style={{ color: "red" }}>D</span>ashboar
+        <span style={{ color: "red" }}>D</span>
       </Typography>
 
       <Divider style={{ color: "white", height: "2px" }} />
@@ -175,14 +175,7 @@ function Dashboard(props) {
             <MenuIcon />
           </IconButton>
           
-            <Typography
-              sx={{ flexGrow: 1 }}
-              variant="h6"
-              noWrap
-              component="div"
-            >
-              Dashboard
-            </Typography>
+            
           
           
           <span>
