@@ -21,7 +21,7 @@ const useFirebase = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [authError, setAuthError] = useState("");
   const [admin, setAdmin] = useState(false);
-  
+
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
 
@@ -68,7 +68,7 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
   // Login User
-  const loginUser = (email, password, location, navigate) =>{
+  const loginUser = (email, password, location, navigate) => {
     setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -116,7 +116,7 @@ const useFirebase = () => {
   // Save user to database
   const saveUserData = (email, name, method) => {
     const userData = { email, name };
-    fetch('', {
+    fetch("", {
       method: method,
       headers: {
         "content-type": "application/json",

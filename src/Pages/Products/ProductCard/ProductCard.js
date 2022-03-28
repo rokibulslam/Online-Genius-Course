@@ -1,67 +1,45 @@
 import React from "react";
-import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import cardOne from "../../../Images/card-1.jpg";
 import "./ProductCard.css";
 import { Grid, Paper } from "@mui/material";
 import { Box } from "@mui/system";
-import Rating from "@mui/material/Rating";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
+import Rating from "react-rating";
 
 const ProductCard = (props) => {
-  const [value, setValue] = React.useState(2);
   const { product } = props;
   return (
     <>
-      <Grid
-        sx={{ display: "flex", justifyContent: "center" }}
-        item
-        xs={12}
-        md={4}
-      >
+      <Grid sx={{ display: "flex", justifyContent: "center" }} item xs={12} md={4}>
         {/*----------------------- card body---------------------- */}
         <div
-          className="parent"
-          sx={{ p: 60 }}
+          className="parent img_section"
           style={{
-            margin: "0 auto",
             width: "390px",
-            boxShadow: "8px -1px 45px -13px #000000",
+            boxShadow: "2px 3px 45px rgba(0,0,0,0.05)",
           }}
         >
           {/*--------------- treanding badge------------- */}
           <span className="badge trending">trending</span>
 
-          <div className="effect" style={{ padding: "12px" }}>
-            {/*--------------- card section ----------*/}
-            <Card
-              style={{ boxShadow: "3px 2px 28px 4px rgba(0,0,0,0.69)" }}
-              sx={{ Width: 416, height: 222 }}
-            >
-              {/*------------card img section -----------------*/}
-              <CardMedia
-                component="img"
-                alt="green iguana"
-                height="222"
-                image={product?.Image}
-              />
-            </Card>
+          <div>
+            {/*------------card img section -----------------*/}
+            <CardMedia className="card_image" component="img" alt="green iguana" /* height="222" */ image={product?.Image} />
           </div>
 
           {/*-----------------------------card text section------------------ */}
           <Box
             sx={{
               display: "flex",
+              width: "100%",
               // flexWrap: 'wrap',
               justifyContent: "flex-start",
               "& > :not(style)": {
                 width: 390,
-                height: 215,
-
                 padding: 3,
                 borderBox: "auto",
               },
@@ -81,22 +59,13 @@ const ProductCard = (props) => {
                   {product?.Name}
                 </Typography>
                 <Typography>
-                  <p style={{ fontSize: "13px", color: "#444" }}>
-                    {product?.Author}
-                  </p>
+                  <p style={{ fontSize: "13px", color: "#444" }}>by {product?.Author}</p>
                 </Typography>
               </div>
 
               <Box sx={{ display: "flex" }}>
                 {/*------------------ rating section--------------------------*/}
-                <Rating
-                  sx={{ mr: 3 }}
-                  name="simple-controlled"
-                  value={value}
-                  onChange={(event, newValue) => {
-                    setValue(newValue);
-                  }}
-                ></Rating>
+                <Rating initialRating={product?.Rating} emptySymbol="far fa-star icon-color" fullSymbol="fas fa-star icon-color" readonly></Rating>
                 {/* <Typography>(05)</Typography> */}
               </Box>
 
@@ -105,7 +74,7 @@ const ProductCard = (props) => {
                 style={{
                   margin: "28px 0",
                   display: "block",
-                  color: "#ecebed",
+                  color: "lightgrey",
                   opacity: "0.3",
                 }}
               ></hr>
@@ -114,31 +83,28 @@ const ProductCard = (props) => {
                 style={{
                   display: "flex",
                   justifyContent: "space-between",
+                  alignItems: "center",
                   marginTop: "3px",
                 }}
               >
                 <div>
-                  <Typography style={{ color: "#242f6c" }} variant="h4">
+                  <Typography style={{ color: "#242f6c" }} variant="h5">
                     ${product?.Price}
                   </Typography>
                 </div>
                 <Box sx={{ ml: 5, display: "flex" }}>
-                  {/* <Button
-                    className="btn"
-                    style={{ border: "1px solid #ecebed" }}
-                  >
+                  <Button className="btn" style={{ border: "1px solid #ecebed", textTransform: "capitalize" }}>
                     <span>Preview</span>
-                  </Button> */}
+                  </Button>
                   {/* -----------------------font awesome icon --------------------*/}
                   <NavLink to={`/home/purchase/${product?._id}`}>
                     <FontAwesomeIcon
-                      classname="icon"
+                      className="icon"
                       style={{
                         borderRadius: "2px",
                         padding: "6px 13px",
                         marginLeft: "15px",
                       }}
-                      className="icon"
                       icon={faShoppingCart}
                     ></FontAwesomeIcon>
                   </NavLink>

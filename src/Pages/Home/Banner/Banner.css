@@ -103,10 +103,10 @@
   top: 0;
   margin-left: 10px;
   fill: none;
-  stroke-linecap: round;
+  strokelinecap: round;
   stroke-linejoin: round;
   stroke: #234567;
-  stroke-width: 2;
+  strokewidth: 2;
   transform: translateX(-5px);
   transition: all 0.3s ease;
 }

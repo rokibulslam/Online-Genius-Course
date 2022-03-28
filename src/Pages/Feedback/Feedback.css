@@ -1,63 +1,42 @@
-.parents_img{
-    position: relative;
-
+.parents_img {
+  position: relative;
 }
 
-.IMAGE_RADIUS{
+.IMAGE_RADIUS {
+  display: inline-block;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 50%;
+  position: absolute;
+  top: -35px;
+}
+
+.feedback_card {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.feedback_card:hover .IMAGE_RADIUS {
+  display: inline-block;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 50%;
+  position: absolute;
+  top: 85%;
+  left: 65%;
+}
+
+@media only screen and (max-width: 991px) {
+  .feedback_card:hover .IMAGE_RADIUS {
     display: inline-block;
     padding: 8px;
     background: #fff;
     border: 1px solid #ebebeb;
     border-radius: 50%;
     position: absolute;
-    top: -35px;
-    /* height:75px;
-    width: 75px; */
-}
-
-
-
-/* .feedback{
-    height: 280px;
-
-} */
-
-
-@media only screen and (max-width: 1200px){
-    .feedback{
-        height: 500px;
-        margin-bottom: 20px;
-
-    }
-    
-}
-@media only screen and (max-width: 700px){
-	/*Big smartphones [426px -> 600px]*/
-    .feedback{
-        height: 550px;
-
-    }
-    .space{
-        margin-bottom:500px;
-    }
-}
-@media only screen and (max-width: 600px){
-	/*Big smartphones [426px -> 600px]*/
-    .feedback{
-        height: 550px;
-
-    }
-    .space{
-        margin-bottom:500px;
-    }
-}
-@media only screen and (max-width: 425px){
-	/*Small smartphones [325px -> 425px]*/
-    .feedback{
-        height: 550px;
-
-    }
-    .space{
-        margin-bottom:500px;
-    }
+    top: 85%;
+    left: 20%;
+  }
 }

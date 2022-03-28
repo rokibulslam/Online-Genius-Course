@@ -1,15 +1,12 @@
-import {
-  Grid,
-  Paper,
-  Typography,
-  Button,
-  Rating,
-  Container,
-} from "@mui/material";
-import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick/lib/slider";
 import "./Reviews.css";
+import { Card, CardMedia, Typography } from "@mui/material";
+import { Box } from "@mui/system";
+import Rating from "react-rating";
+
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
@@ -18,59 +15,93 @@ const Reviews = () => {
       .then((data) => setReviews(data));
   }, []);
 
+  // react-slick animation
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 3,
+    autoplay: true,
+    speed: 1500,
+    autoplaySpeed: 3000,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 2,
+        },
+      },
+    ],
+  };
   return (
-    <div className="review-bg dashboard-main">
-      <h1 className="">Customer's Reviews</h1>
-      <Box sx={{ py: 5 }}>
-        <Container>
-          <Grid container spacing={2}>
-            {reviews?.map((review) => (
-              <Grid key={review._id} item xs={12} sm={6} md={4}>
-                <Paper elevation={3} sx={{ p: 2, height: 250, width: 300 }}>
-                  <Typography
-                    sx={{ color: "error.main", fontWeight: 600 }}
-                    variant="h5"
-                    gutterBottom
-                    component="div"
-                  >
-                    Reviewed By
-                  </Typography>
-                  <Typography
-                    sx={{ color: "info.main", fontWeight: 400 }}
-                    variant="h5"
-                    gutterBottom
-                    component="div"
-                  >
-                    {review.customerName}
-                  </Typography>
-                  <Box
-                    sx={{
-                      "& > legend": { mt: 2 },
-                    }}
-                  >
-                    <Rating
-                      readOnly
-                      name="simple-controlled"
-                      value={review.star}
-                    />
-                  </Box>
-
-                  <Typography variant="h7" gutterBottom component="div">
-                    {review.comment}
-                  </Typography>
-                  <Typography variant="h6" gutterBottom component="div">
-                    {review.date}
-                  </Typography>
-                </Paper>
-              </Grid>
-            ))}
-          </Grid>
-          <Typography sx={{ mt: 5 }} variant="h6" gutterBottom component="div">
-            <NavLink to="/dashboard/review">Give A Review</NavLink>
-          </Typography>
-        </Container>
+    <Box sx={{ py: 12 }}>
+      <Box className="text-center mx-auto mb-5">
+        <Typography variant="h4" className="fw-bold">
+          {" "}
+          Customer's <span className="text-danger">Review</span>
+        </Typography>
+        <Typography className="text-muted">
+          {" "}
+          Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, <br /> blandit posuere ligula varius congue cursus
+          porta feugiat
+        </Typography>
       </Box>
-    </div>
+      <div className="container mx-auto">
+        <Slider {...settings}>
+          {reviews.map((review, index) => (
+            <div key={index}>
+              <Card className="border-0 shadow  my-2 p-3 text-center mx-2">
+                <CardMedia
+                  component="img"
+                  sx={{ width: "80px", height: "80px", borderRadius: "50%", margin: "0 auto" }}
+                  image={review?.img}
+                  alt="Paella dish"
+                />
+                <Box>
+                  <Typography>
+                    <small className="text-muted">"{review?.comment}"</small>
+                  </Typography>
+                  <Typography className="text-start">{review?.customerName}</Typography>
+                  <Typography className="d-flex justify-content-between align-items-center">
+                    <i>
+                      <small>Date: {review?.date}</small>
+                    </i>
+                    <Box
+                      sx={{
+                        "& > legend": { mt: 2 },
+                      }}
+                    >
+                      <Rating initialRating={review?.star} emptySymbol="far fa-star icon-color" fullSymbol="fas fa-star icon-color" readonly></Rating>
+                    </Box>
+                  </Typography>
+                </Box>
+              </Card>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </Box>
   );
 };
 

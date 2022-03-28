@@ -1,5 +1,3 @@
-
-
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import AuthProvider from "./Context/AuthProvider";
@@ -46,17 +44,11 @@ function App() {
                 </PrivateRoute>
               }
             >
-              <Route
-                path="/dashboard/addProduct"
-                element={<AddProduct />}
-              ></Route>
+              <Route path="/dashboard/addProduct" element={<AddProduct />}></Route>
               <Route path="/dashboard/myOrders" element={<MyOrder />}></Route>
               <Route path="/dashboard/orders" element={<ManageOrder />}></Route>
               <Route path="/dashboard/review" element={<Review />}></Route>
-              <Route
-                path="/dashboard/manageProduct"
-                element={<ManageProduct />}
-              ></Route>
+              <Route path="/dashboard/manageProduct" element={<ManageProduct />}></Route>
             </Route>
             <Route path="*" element={<Notfound></Notfound>}></Route>
           </Routes>

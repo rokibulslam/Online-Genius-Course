@@ -1,0 +1,36 @@
+[debug] [2022-03-27T13:07:41.895Z] ----------------------------------------------------------------------
+[debug] [2022-03-27T13:07:41.897Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-03-27T13:07:41.897Z] CLI Version:   10.4.0
+[debug] [2022-03-27T13:07:41.898Z] Platform:      win32
+[debug] [2022-03-27T13:07:41.898Z] Node Version:  v16.14.0
+[debug] [2022-03-27T13:07:41.905Z] Time:          Sun Mar 27 2022 19:07:41 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-03-27T13:07:41.906Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-27T13:07:41.911Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-03-27T13:07:42.003Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-27T13:07:42.003Z] > authorizing via signed-in user (alaminsbl502@gmail.com)
+[debug] [2022-03-27T13:07:42.003Z] [iam] checking project online-geinus-course for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-03-27T13:07:42.004Z] > refreshing access token with scopes: []
+[debug] [2022-03-27T13:07:42.005Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-27T13:07:42.574Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 27 Mar 2022 13:07:42 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-27T13:07:42.584Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/online-geinus-course:testIamPermissions [none]
+[debug] [2022-03-27T13:07:42.584Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/online-geinus-course:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-03-27T13:07:43.682Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-03-27T13:07:43.682Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-03-27T13:07:44.218Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/online-geinus-course:testIamPermissions 200
+[debug] [2022-03-27T13:07:44.218Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/online-geinus-course:testIamPermissions {}
+[debug] [2022-03-27T13:07:44.219Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project online-geinus-course:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2022-03-27T13:07:44.220Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/online-geinus-course [none]
+[debug] [2022-03-27T13:07:44.787Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/online-geinus-course 403
+[debug] [2022-03-27T13:07:44.787Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/online-geinus-course {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2022-03-27T13:07:44.787Z] HTTP Error: 403, The caller does not have permission
+[debug] [2022-03-27T13:07:45.095Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:47:12)
+    at RetryOperation._fn (C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:286:39)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project online-geinus-course. Please make sure the project exists and your account has permission to access it.

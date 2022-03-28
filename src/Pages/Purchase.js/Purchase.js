@@ -1,16 +1,4 @@
-import {
-  Button,
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Container,
-  Grid,
-  TextField,
-  Typography,
-} from "@mui/material";
-import useId from "@mui/material/utils/useId";
+import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Container, Grid, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import axios from "axios";
 import React from "react";
@@ -18,7 +6,6 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
-import Navigation from "../Home/Navbar/Navbar";
 import Swal from "sweetalert2";
 
 const Purchase = () => {
@@ -33,7 +20,7 @@ const Purchase = () => {
     fetch(`https://boiling-oasis-12763.herokuapp.com/course/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
-  }, []);
+  }, [id]);
 
   const handelOrderField = (e) => {
     const field = e.target.name;
@@ -57,58 +44,35 @@ const Purchase = () => {
       customerName: user.displayName,
       email: user?.email,
     };
-    axios
-      .post("https://boiling-oasis-12763.herokuapp.com/orders", order)
-      .then((res) => {
-        if (res.data.insertedId) {
-          Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "Your order has been placed",
-            showConfirmButton: false,
-            timer: 2000,
-          });
-        }
-      });
+    axios.post("https://boiling-oasis-12763.herokuapp.com/orders", order).then((res) => {
+      if (res.data.insertedId) {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Your order has been placed",
+          showConfirmButton: false,
+          timer: 2000,
+        });
+      }
+    });
     e.preventDefault();
   };
 
   return (
     <div>
-      
       <Box>
-        <Typography
-          sx={{ textAlign: "center", mt: 5, color: "warning.main" }}
-          variant="h2"
-          component="div"
-          gutterBottom
-        >
-          Purchase
+        <Typography className="fw-bold" sx={{ textAlign: "center", mt: 5, color: "warning.main" }} variant="h3" component="div" gutterBottom>
+          Purchase Now
         </Typography>
-        <Container>
-          <Typography
-            sx={{ textAlign: "start", mt: 5, color: "info.main" }}
-            variant="h7"
-            component="div"
-            gutterBottom
-          >
-            {user.displayName} <br />
-            {user.email}
-          </Typography>
-        </Container>
+        <hr className="container" />
+
         <Container>
           <Grid container spacing={2}>
             <Grid item xs={12} md={6}>
-              <Box sx={{ my: 5 }}>
-                <Card>
+              <Box>
+                <Card className="border-0 shadow mb-2">
                   <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="100%"
-                      width="100%"
-                      image={Image}
-                      alt="green iguana"
-                    />
+                    <CardMedia component="img" height="100%" width="100%" image={Image} alt="green iguana" />
                     <CardContent sx={{ textAlign: "start" }}>
                       <Typography gutterBottom variant="h5" component="div">
                         Name: {Name}
@@ -134,7 +98,7 @@ const Purchase = () => {
                   <form onSubmit={onSubmitOrder}>
                     <TextField
                       // required
-                      sx={{ width: "90%", m: 1 }}
+                      sx={{ width: "90%", m: 1, mt: 0 }}
                       disabled
                       id="outlined-basic"
                       label={user?.displayName}
@@ -142,14 +106,7 @@ const Purchase = () => {
                       onBlur={handelOrderField}
                       variant="outlined"
                     />
-                    <TextField
-                      sx={{ width: "90%", m: 1 }}
-                      disabled
-                      id="outlined-basic"
-                      label={user.email}
-                      type="email"
-                      variant="outlined"
-                    />
+                    <TextField sx={{ width: "90%", m: 1 }} disabled id="outlined-basic" label={user.email} type="email" variant="outlined" />
                     <TextField
                       required
                       sx={{ width: "90%", m: 1 }}

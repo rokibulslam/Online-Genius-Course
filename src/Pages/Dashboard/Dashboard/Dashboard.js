@@ -6,28 +6,20 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { Outlet, Link, NavLink, Route } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 import { Button } from "@mui/material";
 import useAuth from "../../../Hooks/useAuth";
-import { FcAddDatabase, FcHeatMap, FcHome, FcPlus, FcRating } from "react-icons/fc";
+import { FcAddDatabase, FcHeatMap, FcHome, FcRating } from "react-icons/fc";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
-import ManageOrder from "../ManageOrder/ManageOrder";
-
-import MyOrder from "../MyOrder/MyOrder";
-import { green } from "@mui/material/colors";
-import { height } from "@mui/system";
+import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import profile from "../../../Image/profile.png";
-import './Dasboard.css'
+// import DashboardHome from "../DashboardHome/DashboardHome";
+import "./Dasboard.css";
 const drawerWidth = 200;
 
 function Dashboard(props) {
@@ -86,10 +78,7 @@ function Dashboard(props) {
           </ListItem>
 
           <ListItem>
-            <NavLink
-              style={{ textDecoration: "none" }}
-              to="/dashboard/addProduct"
-            >
+            <NavLink style={{ textDecoration: "none" }} to="/dashboard/addProduct">
               <span style={{ fontSize: "20px", paddingRight: "2px" }}>
                 <FcAddDatabase />
               </span>
@@ -99,10 +88,7 @@ function Dashboard(props) {
             </NavLink>
           </ListItem>
           <ListItem>
-            <NavLink
-              style={{ textDecoration: "none" }}
-              to="/dashboard/manageProduct"
-            >
+            <NavLink style={{ textDecoration: "none" }} to="/dashboard/manageProduct">
               <span style={{ fontSize: "20px", paddingRight: "2px" }}>
                 <FcHeatMap />
               </span>
@@ -122,10 +108,7 @@ function Dashboard(props) {
             </NavLink>
           </ListItem>
           <ListItem>
-            <NavLink
-              style={{ textDecoration: "none" }}
-              to="/dashboard/myOrders"
-            >
+            <NavLink style={{ textDecoration: "none" }} to="/dashboard/myOrders">
               <span style={{ fontSize: "20px", paddingRight: "2px" }}>
                 <FcHeatMap />
               </span>
@@ -150,11 +133,10 @@ function Dashboard(props) {
     </Box>
   );
 
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
+  const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box className="dashboard-main" sx={{ display: "flex"}}>
+    <Box className="dashboard-main" sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -165,19 +147,10 @@ function Dashboard(props) {
         }}
       >
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
+          <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={handleDrawerToggle} sx={{ mr: 2, display: { sm: "none" } }}>
             <MenuIcon />
           </IconButton>
-          
-            
-          
-          
+
           <span>
             {user.photoURL ? (
               <img
@@ -204,19 +177,13 @@ function Dashboard(props) {
             )}
           </span>
           <Box>
-            <Typography
-              style={{ color: "black"}}
-              variant="h6" noWrap component="div">
+            <Typography style={{ color: "black" }} variant="h6" noWrap component="div">
               {user.displayName}
             </Typography>
           </Box>
         </Toolbar>
       </AppBar>
-      <Box
-        component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-        aria-label="mailbox folders"
-      >
+      <Box component="nav" sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }} aria-label="mailbox folders">
         <Drawer
           container={container}
           variant="temporary"
@@ -258,9 +225,8 @@ function Dashboard(props) {
         }}
       >
         <Toolbar />
-        
-        
-        <Outlet></Outlet>
+
+        <Outlet />
       </Box>
     </Box>
   );

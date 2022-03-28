@@ -1,0 +1,232 @@
+.pl {
+  width: 5em;
+  height: 5em;
+}
+
+.pl circle {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+
+.pl__ring1 {
+  animation: ring1 4s 0s ease-in-out infinite;
+}
+
+.pl__ring2 {
+  animation: ring2 4s 0.04s ease-in-out infinite;
+}
+
+.pl__ring3 {
+  animation: ring3 4s 0.08s ease-in-out infinite;
+}
+
+.pl__ring4 {
+  animation: ring4 4s 0.12s ease-in-out infinite;
+}
+
+.pl__ring5 {
+  animation: ring5 4s 0.16s ease-in-out infinite;
+}
+
+.pl__ring6 {
+  animation: ring6 4s 0.2s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes ring1 {
+  from {
+    strokedashoffset: -376.237129776;
+    transform: rotate(-0.25turn);
+    animation-timing-function: ease-in;
+  }
+
+  23% {
+    strokedashoffset: -94.247778;
+    transform: rotate(1turn);
+    animation-timing-function: ease-out;
+  }
+
+  46%,
+  50% {
+    strokedashoffset: -376.237129776;
+    transform: rotate(2.25turn);
+    animation-timing-function: ease-in;
+  }
+
+  73% {
+    strokedashoffset: -94.247778;
+    transform: rotate(3.5turn);
+    animation-timing-function: ease-out;
+  }
+
+  96%,
+  to {
+    strokedashoffset: -376.237129776;
+    transform: rotate(4.75turn);
+  }
+}
+
+@keyframes ring2 {
+  from {
+    strokedashoffset: -329.207488554;
+    transform: rotate(-0.25turn);
+    animation-timing-function: ease-in;
+  }
+
+  23% {
+    strokedashoffset: -82.46680575;
+    transform: rotate(1turn);
+    animation-timing-function: ease-out;
+  }
+
+  46%,
+  50% {
+    strokedashoffset: -329.207488554;
+    transform: rotate(2.25turn);
+    animation-timing-function: ease-in;
+  }
+
+  73% {
+    strokedashoffset: -82.46680575;
+    transform: rotate(3.5turn);
+    animation-timing-function: ease-out;
+  }
+
+  96%,
+  to {
+    strokedashoffset: -329.207488554;
+    transform: rotate(4.75turn);
+  }
+}
+
+@keyframes ring3 {
+  from {
+    strokedashoffset: -288.4484661616;
+    transform: rotate(-0.25turn);
+    animation-timing-function: ease-in;
+  }
+
+  23% {
+    strokedashoffset: -72.2566298;
+    transform: rotate(1turn);
+    animation-timing-function: ease-out;
+  }
+
+  46%,
+  50% {
+    strokedashoffset: -288.4484661616;
+    transform: rotate(2.25turn);
+    animation-timing-function: ease-in;
+  }
+
+  73% {
+    strokedashoffset: -72.2566298;
+    transform: rotate(3.5turn);
+    animation-timing-function: ease-out;
+  }
+
+  96%,
+  to {
+    strokedashoffset: -288.4484661616;
+    transform: rotate(4.75turn);
+  }
+}
+
+@keyframes ring4 {
+  from {
+    strokedashoffset: -253.9600625988;
+    transform: rotate(-0.25turn);
+    animation-timing-function: ease-in;
+  }
+
+  23% {
+    strokedashoffset: -63.61725015;
+    transform: rotate(1turn);
+    animation-timing-function: ease-out;
+  }
+
+  46%,
+  50% {
+    strokedashoffset: -253.9600625988;
+    transform: rotate(2.25turn);
+    animation-timing-function: ease-in;
+  }
+
+  73% {
+    strokedashoffset: -63.61725015;
+    transform: rotate(3.5turn);
+    animation-timing-function: ease-out;
+  }
+
+  96%,
+  to {
+    strokedashoffset: -253.9600625988;
+    transform: rotate(4.75turn);
+  }
+}
+
+@keyframes ring5 {
+  from {
+    strokedashoffset: -225.7422778656;
+    transform: rotate(-0.25turn);
+    animation-timing-function: ease-in;
+  }
+
+  23% {
+    strokedashoffset: -56.5486668;
+    transform: rotate(1turn);
+    animation-timing-function: ease-out;
+  }
+
+  46%,
+  50% {
+    strokedashoffset: -225.7422778656;
+    transform: rotate(2.25turn);
+    animation-timing-function: ease-in;
+  }
+
+  73% {
+    strokedashoffset: -56.5486668;
+    transform: rotate(3.5turn);
+    animation-timing-function: ease-out;
+  }
+
+  96%,
+  to {
+    strokedashoffset: -225.7422778656;
+    transform: rotate(4.75turn);
+  }
+}
+
+@keyframes ring6 {
+  from {
+    strokedashoffset: -203.795111962;
+    transform: rotate(-0.25turn);
+    animation-timing-function: ease-in;
+  }
+
+  23% {
+    strokedashoffset: -51.05087975;
+    transform: rotate(1turn);
+    animation-timing-function: ease-out;
+  }
+
+  46%,
+  50% {
+    strokedashoffset: -203.795111962;
+    transform: rotate(2.25turn);
+    animation-timing-function: ease-in;
+  }
+
+  73% {
+    strokedashoffset: -51.05087975;
+    transform: rotate(3.5turn);
+    animation-timing-function: ease-out;
+  }
+
+  96%,
+  to {
+    strokedashoffset: -203.795111962;
+    transform: rotate(4.75turn);
+  }
+}

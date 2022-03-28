@@ -1,31 +1,21 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Vesper+Libre:wght@900&display=swap'); */
 
-.effect {
-  transition: transform 1s linear;
-  transform: scale(1);
-  /* width: 400px; */
-}
-.effect:hover {
-  /* transition: transform 1s linear; */
-  transform: scale(1.09);
+.img_section {
+  overflow: hidden;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
-.see {
-  width: 100px;
-  transform: scale(1);
-  height: 100px;
-  background: red;
-  transition: transform 2s;
+.img_section .card_image {
+  width: 100%;
+  transition: 0.5s all ease-in-out;
 }
 
-.see:hover {
-  /* width: 300px; */
-  transform: scale(2);
+.img_section:hover .card_image {
+  transform: scale(0.9);
 }
-
 .btn {
   color: black;
-  font-weight: bold;
   height: 30px;
   width: 100px;
 }
@@ -51,23 +41,12 @@
   background: linear-gradient(to left, #00a7d5, #00ded8);
 }
 
-.btn span {
-  color: #242f6c;
-  font-weight: bold;
-}
-.btn span:hover {
-  font-weight: bold;
+.icon {
+  /* background: rgb(0,218,215); */
+  background: linear-gradient(107deg, rgba(0, 218, 215, 1) 18%, rgba(0, 176, 213, 1) 50%);
   color: rgba(241, 230, 230, 0.918);
 }
 
-.icon,
-.btn:hover {
-  /* background: rgb(0,218,215); */
-  background: linear-gradient(
-    107deg,
-    rgba(0, 218, 215, 1) 18%,
-    rgba(0, 176, 213, 1) 50%
-  );
-  color: rgba(241, 230, 230, 0.918);
-  font-weight: bold;
+.icon-color {
+  color: orange;
 }

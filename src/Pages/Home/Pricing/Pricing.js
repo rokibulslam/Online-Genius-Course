@@ -13,7 +13,12 @@ const Pricing = () => {
 
   return (
     <React.Fragment sx={{ my: 5, py: 5 }}>
-      <Box>
+      <Box
+        style={{
+          padding: "100px 0",
+          background: "#f9fbfb",
+        }}
+      >
         <Box sx={{ textAlign: "center", pb: 5 }}>
           <h2>Our Pricing Plan</h2>
           <Typography variant="body1">
