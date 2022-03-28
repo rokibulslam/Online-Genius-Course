@@ -39,7 +39,7 @@ const ManageProduct = () => {
     <div className="my-5">
       <div className="container">
         <h4 className="banner-text ">
-          <i>Manage APARTMENT</i>
+          <i>Manage Courses</i>
         </h4>
 
         <div className="py-5">
