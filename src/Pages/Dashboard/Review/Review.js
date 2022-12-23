@@ -28,17 +28,19 @@ const Review = () => {
       customerName: user?.displayName,
       img: user?.photoURL,
     };
-    axios.post("https://boiling-oasis-12763.herokuapp.com/review", review).then((res) => {
-      if (res.data.insertedId) {
-        Swal.fire({
-          position: "center",
-          icon: "success",
-          title: "Reviewed Successfully",
-          showConfirmButton: false,
-          timer: 2000,
-        });
-      }
-    });
+    axios
+      .post("https://online-genius-course-server.onrender.com/review", review)
+      .then((res) => {
+        if (res.data.insertedId) {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Reviewed Successfully",
+            showConfirmButton: false,
+            timer: 2000,
+          });
+        }
+      });
 
     e.preventDefault();
   };

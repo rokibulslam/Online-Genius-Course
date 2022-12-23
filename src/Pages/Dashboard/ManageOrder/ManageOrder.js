@@ -8,16 +8,19 @@ const ManageOrder = () => {
   const [update, setUpdate] = useState("");
 
   useEffect(() => {
-    fetch("https://boiling-oasis-12763.herokuapp.com/orders")
+    fetch("https://online-genius-course-server.onrender.com/orders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [update]);
 
   const handlePending = (id, text) => {
     axios
-      .put(`https://boiling-oasis-12763.herokuapp.com/order/status/${id}`, {
-        status: text,
-      })
+      .put(
+        `https://online-genius-course-server.onrender.com/order/status/${id}`,
+        {
+          status: text,
+        }
+      )
       .then((res) => {
         if (res.data.acknowledged) {
           Swal.fire({
@@ -37,7 +40,9 @@ const ManageOrder = () => {
 
     if (confirm) {
       axios
-        .delete(`https://boiling-oasis-12763.herokuapp.com/order/delete/${id}`)
+        .delete(
+          `https://online-genius-course-server.onrender.com/order/delete/${id}`
+        )
         .then((res) => {
           if (res.data.deletedCount) {
             Swal.fire({

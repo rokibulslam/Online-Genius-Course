@@ -9,7 +9,7 @@ const HomePageProduct = () => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://boiling-oasis-12763.herokuapp.com/courses")
+    fetch("https://online-genius-course-server.onrender.com/courses")
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .finally(() => setIsLoading(false));

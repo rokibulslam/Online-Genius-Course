@@ -9,7 +9,7 @@ const ManageProduct = () => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://boiling-oasis-12763.herokuapp.com/courses")
+    fetch("https://online-genius-course-server.onrender.com/courses")
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .finally(() => setIsLoading(false));
@@ -20,18 +20,22 @@ const ManageProduct = () => {
     const confirm = window.confirm("Are You Sure? You are going to delete Product");
     if (confirm) {
       setIsLoading(true);
-      axios.delete(`https://boiling-oasis-12763.herokuapp.com/course/delete/${id}`).then((res) => {
-        if (res.data.deletedCount) {
-          setIsLoading(false);
-          Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "Product has been Deleted",
-            showConfirmButton: false,
-            timer: 2000,
-          });
-        }
-      });
+      axios
+        .delete(
+          `https://online-genius-course-server.onrender.com/course/delete/${id}`
+        )
+        .then((res) => {
+          if (res.data.deletedCount) {
+            setIsLoading(false);
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Product has been Deleted",
+              showConfirmButton: false,
+              timer: 2000,
+            });
+          }
+        });
     }
   };
 

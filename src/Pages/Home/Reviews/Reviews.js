@@ -10,7 +10,7 @@ import Rating from "react-rating";
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("https://boiling-oasis-12763.herokuapp.com/reviews")
+    fetch("https://online-genius-course-server.onrender.com/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);

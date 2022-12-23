@@ -11,7 +11,9 @@ const MyOrder = () => {
 
   // Get Ordered food by customer email
   useEffect(() => {
-    fetch(`https://boiling-oasis-12763.herokuapp.com/orders/${user?.email}`)
+    fetch(
+      `https://online-genius-course-server.onrender.com/orders/${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [user?.email, cancel]);
@@ -22,7 +24,9 @@ const MyOrder = () => {
 
     if (confirm) {
       axios
-        .delete(`https://boiling-oasis-12763.herokuapp.com/order/delete/${id}`)
+        .delete(
+          `https://online-genius-course-server.onrender.com/order/delete/${id}`
+        )
         .then((res) => {
           if (res.data.deletedCount) {
             Swal.fire({

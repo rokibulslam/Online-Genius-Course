@@ -36,7 +36,10 @@ const AddProduct = () => {
     //   Send Product to Database
     e.preventDefault();
     axios
-      .post("https://boiling-oasis-12763.herokuapp.com/courses", productDetails)
+      .post(
+        "https://online-genius-course-server.onrender.com/courses",
+        productDetails
+      )
 
       .then((res) => {
         if (res.data.insertedId) {
