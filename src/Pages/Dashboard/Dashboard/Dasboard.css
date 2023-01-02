@@ -1,5 +1,25 @@
-.dashboard-main{
-    text-align: center;
-  font-family: 'Times New Roman', Times, serif;
-  overflow: hidden;
+.dashboard-sidebar{
+    height: 100vh;
+    background-color: rgb(71, 60, 252);
+}
+.header{
+    margin-top: 10px;
+    color: whitesmoke;
+    font-weight: bolder;
+}
+.toolbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+.active-nav{
+    background-color: black;
+    padding: 20px 40px 40px 20px;
+}
+.navlink{
+    
+}
+.navlink:hover{
+    background-color: rgba(0, 0, 0, 0.493);
 }

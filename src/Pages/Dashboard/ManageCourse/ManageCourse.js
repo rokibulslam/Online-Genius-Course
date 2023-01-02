@@ -4,7 +4,7 @@ import { Card, NavLink } from "react-bootstrap";
 
 import Swal from "sweetalert2";
 
-const ManageProduct = () => {
+const ManageCourse = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
@@ -17,7 +17,9 @@ const ManageProduct = () => {
 
   // Delete a Food Item
   const handleDeleteFood = (id) => {
-    const confirm = window.confirm("Are You Sure? You are going to delete Product");
+    const confirm = window.confirm(
+      "Are You Sure? You are going to delete Product"
+    );
     if (confirm) {
       setIsLoading(true);
       axios
@@ -51,7 +53,12 @@ const ManageProduct = () => {
             {products.map((product) => (
               <div className="col-md-4 col-sm-12">
                 <Card className="card-container">
-                  <Card.Img className="img-fluid" style={{ borderRadius: "5px" }} variant="top" src={product?.Image} />
+                  <Card.Img
+                    className="img-fluid"
+                    style={{ borderRadius: "5px" }}
+                    variant="top"
+                    src={product?.Image}
+                  />
                   {product?.Category === "Featured" ? (
                     <div>
                       <span className="discount-text">20% Free</span>
@@ -61,7 +68,11 @@ const ManageProduct = () => {
                     <span className="card-img-text">{product?.Category}</span>
                   )}
                   <Card.Body className="text-start">
-                    <Card.Title style={{ color: "rgb(134, 80, 25)", fontSize: "30px" }}>{product?.Name}</Card.Title>
+                    <Card.Title
+                      style={{ color: "rgb(134, 80, 25)", fontSize: "30px" }}
+                    >
+                      {product?.Name}
+                    </Card.Title>
                     <div className="d-flex justify-content-between align-items-center">
                       <p
                         style={{
@@ -75,7 +86,10 @@ const ManageProduct = () => {
                         ${product?.Price}
                       </p>
 
-                      <button onClick={() => handleDeleteFood(product._id)} className="btn btn-warning">
+                      <button
+                        onClick={() => handleDeleteFood(product._id)}
+                        className="btn btn-warning"
+                      >
                         Delete Course
                       </button>
                     </div>
@@ -90,4 +104,4 @@ const ManageProduct = () => {
   );
 };
 
-export default ManageProduct;
+export default ManageCourse;

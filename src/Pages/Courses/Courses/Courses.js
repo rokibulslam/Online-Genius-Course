@@ -1,9 +1,9 @@
 import { Container, Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
-import ProductCard from "../ProductCard/ProductCard";
+import ProductCard from "../CourseCard/CourseCard";
 
-const AllProducts = () => {
+const Courses = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
@@ -26,16 +26,24 @@ const AllProducts = () => {
       <Container>
         <Box sx={{ marginBottom: "50px" }}>
           <h1>
-            Our All <span className="text-danger fw-bold">Course</span> Collection
+            Our All <span className="text-danger fw-bold">Course</span>{" "}
+            Collection
           </h1>
           <p className="text-muted">
             {" "}
-            Products Build and Earn with your online store with lots of cool and exclusive features bundled with Genius Course!
+            Products Build and Earn with your online store with lots of cool and
+            exclusive features bundled with Genius Course!
           </p>
         </Box>
         {isLoading && (
           <div>
-            <svg className="pl" width="128px" height="128px" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              className="pl"
+              width="128px"
+              height="128px"
+              viewBox="0 0 128 128"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <circle
                 className="pl__ring1"
                 cx="64"
@@ -129,4 +137,4 @@ const AllProducts = () => {
   );
 };
 
-export default AllProducts;
+export default Courses;

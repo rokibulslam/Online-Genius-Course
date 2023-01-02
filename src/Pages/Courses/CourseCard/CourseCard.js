@@ -14,7 +14,12 @@ const ProductCard = (props) => {
   const { product } = props;
   return (
     <>
-      <Grid sx={{ display: "flex", justifyContent: "center" }} item xs={12} md={4}>
+      <Grid
+        sx={{ display: "flex", justifyContent: "center" }}
+        item
+        xs={12}
+        md={4}
+      >
         {/*----------------------- card body---------------------- */}
         <div
           className="parent img_section"
@@ -28,7 +33,12 @@ const ProductCard = (props) => {
 
           <div>
             {/*------------card img section -----------------*/}
-            <CardMedia className="card_image" component="img" alt="green iguana" /* height="222" */ image={product?.Image} />
+            <CardMedia
+              className="card_image"
+              component="img"
+              alt="green iguana"
+              /* height="222" */ image={product?.Image}
+            />
           </div>
 
           {/*-----------------------------card text section------------------ */}
@@ -59,13 +69,20 @@ const ProductCard = (props) => {
                   {product?.Name}
                 </Typography>
                 <Typography>
-                  <p style={{ fontSize: "13px", color: "#444" }}>by {product?.Author}</p>
+                  <p style={{ fontSize: "13px", color: "#444" }}>
+                    by {product?.Author}
+                  </p>
                 </Typography>
               </div>
 
               <Box sx={{ display: "flex" }}>
                 {/*------------------ rating section--------------------------*/}
-                <Rating initialRating={product?.Rating} emptySymbol="far fa-star icon-color" fullSymbol="fas fa-star icon-color" readonly></Rating>
+                <Rating
+                  initialRating={product?.Rating}
+                  emptySymbol="far fa-star icon-color"
+                  fullSymbol="fas fa-star icon-color"
+                  readonly
+                ></Rating>
                 {/* <Typography>(05)</Typography> */}
               </Box>
 
@@ -93,9 +110,20 @@ const ProductCard = (props) => {
                   </Typography>
                 </div>
                 <Box sx={{ ml: 5, display: "flex" }}>
-                  <Button className="btn" style={{ border: "1px solid #ecebed", textTransform: "capitalize" }}>
-                    <span>Preview</span>
-                  </Button>
+                  <NavLink
+                    style={{
+                      border: "1px solid #ecebed",
+                      textTransform: "capitalize",
+                    }}
+                    className="text-decoration-none"
+                    to={`/home/purchase/${product?._id}`}
+                  >
+                    <Button className="btn">
+                      {" "}
+                      <span>Preview</span>
+                    </Button>
+                  </NavLink>
+
                   {/* -----------------------font awesome icon --------------------*/}
                   <NavLink to={`/home/purchase/${product?._id}`}>
                     <FontAwesomeIcon

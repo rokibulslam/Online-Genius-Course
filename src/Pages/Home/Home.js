@@ -3,7 +3,7 @@ import Count from "./CountUp/Count";
 import Banner from "./Banner/Banner";
 import Features from "./Features/Features";
 import Feedback from "../Feedback/Feedback";
-import HomePageProduct from "../Products/HomePageProduct/HomePageProduct";
+import HomePageProduct from "../Courses/HomePageCourses/HomePageCourses";
 import Pricing from "./Pricing/Pricing";
 import Reviews from "./Reviews/Reviews";
 import Footer from "../Footer/Footer";

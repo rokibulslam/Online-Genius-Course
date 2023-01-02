@@ -46,10 +46,21 @@ const Review = () => {
   };
 
   return (
-    <Box>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <Box
         sx={{
-          "& > legend": { mt: 2 },
+          mt: 2,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
         <Typography component="legend">Give us Rating</Typography>
@@ -66,20 +77,18 @@ const Review = () => {
           sx={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
           }}
         >
           <TextField
             required
-            sx={{ width: "25%", m: 1 }}
+            sx={{ m: 1 }}
             id="filled-basic"
             label="Comment Here"
             name="comment"
             onBlur={handleReviewInfo}
             variant="filled"
           />
-          <Button sx={{ width: "25%", m: 1 }} type="submit" variant="contained">
+          <Button sx={{ m: 1 }} type="submit" variant="contained">
             Add a Review
           </Button>
         </Box>

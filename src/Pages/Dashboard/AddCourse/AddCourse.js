@@ -20,7 +20,7 @@ const categories = [
   },
 ];
 
-const AddProduct = () => {
+const AddCourse = () => {
   const [category, setCategory] = useState("");
   const [productDetails, setProductDetails] = useState({});
   const handleOnChange = (e) => {
@@ -61,7 +61,14 @@ const AddProduct = () => {
         <h1 className="register-header-text ">Add A Course</h1>
 
         <form onSubmit={handleSubmit}>
-          <TextField sx={{ width: "75%", m: 1 }} id="standard-basic" label="Course Name" name="Name" onChange={handleOnChange} variant="standard" />
+          <TextField
+            sx={{ width: "75%", m: 1 }}
+            id="standard-basic"
+            label="Course Name"
+            name="Name"
+            onChange={handleOnChange}
+            variant="standard"
+          />
 
           <TextField
             sx={{ width: "75%", m: 1 }}
@@ -134,4 +141,4 @@ const AddProduct = () => {
   );
 };
 
-export default AddProduct;
+export default AddCourse;

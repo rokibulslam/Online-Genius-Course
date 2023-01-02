@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
-import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
@@ -14,116 +13,116 @@ import Typography from "@mui/material/Typography";
 import { Outlet, NavLink } from "react-router-dom";
 import { Button } from "@mui/material";
 import useAuth from "../../../Hooks/useAuth";
-import { FcAddDatabase, FcHeatMap, FcHome, FcRating } from "react-icons/fc";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  FcHeatMap,
+  FcHome,
+  FcRating,
+  FcManager,
+  FcExport,
+  FcRedo,
+} from "react-icons/fc";
 import profile from "../../../Image/profile.png";
-// import DashboardHome from "../DashboardHome/DashboardHome";
 import "./Dasboard.css";
+import { useState } from "react";
 const drawerWidth = 200;
 
 function Dashboard(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  const { logout, user } = useAuth();
+  const [activeUserMenu, setActiveUserMenu] = useState("");
+  const { logout, admin, user } = useAuth();
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
+  const menuActivator = (item) => {
+    setActiveUserMenu(item);
+  };
+
+  const userMenu = [
+    {
+      path: "/",
+      name: "Home",
+      icon: <FcHome />,
+    },
+    {
+      path: "/dashboard/",
+      name: "Order",
+      icon: <FcHome />,
+    },
+    {
+      path: "/dashboard/review",
+      name: "Review",
+      icon: <FcRating />,
+    },
+    {
+      path: "/dashboard/orders",
+      name: "All Order",
+      icon: <FcHome />,
+    },
+    {
+      path: "/dashboard/manageProduct",
+      name: "Courses",
+      icon: <FcHeatMap />,
+    },
+    {
+      path: "/dashboard/addProduct",
+      name: "Add Course",
+      icon: <FcExport />,
+    },
+  ];
+ 
+  // Sidebar
   const drawer = (
-    <Box
-      style={{
-        backgroundColor: "rgb(49, 58, 70)",
-        height: "100vh",
-        color: "whitesmoke",
-      }}
-    >
+    <Box className="dashboard-sidebar">
       <Typography
-        variant="h4"
+        variant=""
         sx={{
-          mt: 2,
+          py: 2,
           mb: 0,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          color: "whitesmoke",
+          fontSize: "600",
         }}
       >
-        <span style={{ color: "red" }}>D</span>ashboar
-        <span style={{ color: "red" }}>D</span>
+        {admin ? <span>ADMIN Dashbord</span> : <span>USER Dashbord</span>}
       </Typography>
-
-      <Divider style={{ color: "white", height: "2px" }} />
+      {/* Sidebar Items for users  */}
       <List>
-        <Box>
-          <ListItem>
-            <NavLink style={{ textDecoration: "none" }} to="/">
-              <span style={{ fontSize: "20px", paddingRight: "2px" }}>
-                <FcHome />
-              </span>
-              <Button variant="text" style={{ color: "white" }}>
-                Home
-              </Button>
-            </NavLink>
-          </ListItem>
-          <ListItem>
-            <NavLink style={{ textDecoration: "none" }} to="/dashboard/review">
-              <span style={{ fontSize: "20px", paddingRight: "2px" }}>
-                <FcRating />
-              </span>
-              <Button variant="text" style={{ color: "white" }}>
-                Add A Review
-              </Button>
-            </NavLink>
-          </ListItem>
-
-          <ListItem>
-            <NavLink style={{ textDecoration: "none" }} to="/dashboard/addProduct">
-              <span style={{ fontSize: "20px", paddingRight: "2px" }}>
-                <FcAddDatabase />
-              </span>
-              <Button variant="text" style={{ color: "white" }}>
-                Add a Course
-              </Button>
-            </NavLink>
-          </ListItem>
-          <ListItem>
-            <NavLink style={{ textDecoration: "none" }} to="/dashboard/manageProduct">
-              <span style={{ fontSize: "20px", paddingRight: "2px" }}>
-                <FcHeatMap />
-              </span>
-              <Button variant="text" style={{ color: "white" }}>
-                Courses
-              </Button>
-            </NavLink>
-          </ListItem>
-          <ListItem>
-            <NavLink style={{ textDecoration: "none" }} to="/dashboard/orders">
-              <span style={{ fontSize: "20px", paddingRight: "2px" }}>
-                <FcHeatMap />
-              </span>
-              <Button variant="text" style={{ color: "white" }}>
-                Manage Order
-              </Button>
-            </NavLink>
-          </ListItem>
-          <ListItem>
-            <NavLink style={{ textDecoration: "none" }} to="/dashboard/myOrders">
-              <span style={{ fontSize: "20px", paddingRight: "2px" }}>
-                <FcHeatMap />
-              </span>
-              <Button variant="text" style={{ color: "white" }}>
-                MY Order
-              </Button>
-            </NavLink>
-          </ListItem>
-        </Box>
-
+        {!admin && (
+          <Box>
+            {userMenu.map((item, index) => (
+              <NavLink
+                onClick={() => menuActivator(item.name)}
+                style={{ textDecoration: "none" }}
+                to={item.path}
+              >
+                <ListItem
+                  className={`navlink ${
+                    activeUserMenu === item.name ? "active-nav" : ""
+                  }`}
+                >
+                  <span style={{ fontSize: "20px", paddingRight: "2px" }}>
+                    {item.icon}
+                  </span>
+                  <Button variant="text" style={{ color: "white" }}>
+                    {item.name}
+                  </Button>
+                </ListItem>
+              </NavLink>
+            ))}
+          </Box>
+        )}
+        {/* Sidebar items for Admin  */}
+        
+        {/* Logout Button  */}
         <Box>
           <ListItem>
             <Button style={{ color: "white" }} onClick={logout} variant="text">
               <span style={{ paddingRight: "10px", fontSize: "20px" }}>
-                <FontAwesomeIcon icon={faSignOutAlt} />
+                <FcRedo />
               </span>
               Logout
             </Button>
@@ -133,57 +132,80 @@ function Dashboard(props) {
     </Box>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box className="dashboard-main" sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
         position="fixed"
-        style={{ backgroundColor: "rgb(250, 251, 254)", color: "#727CF5" }}
+        style={{ backgroundColor: "#6790FF", color: "whitesmoke" }}
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
         }}
       >
-        <Toolbar>
-          <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={handleDrawerToggle} sx={{ mr: 2, display: { sm: "none" } }}>
+        <Toolbar
+          sx={{
+            display: "flex",
+            justifyContent: {
+              xl: "end",
+              lg: "end",
+              md: "end",
+              sm: "end",
+              xs: "space-between",
+            },
+          }}
+        >
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: "none" } }}
+          >
             <MenuIcon />
           </IconButton>
 
-          <span>
-            {user.photoURL ? (
-              <img
-                style={{
-                  height: "45px",
-                  width: "45px",
-                  borderRadius: "50%",
-                  marginRight: "10px",
-                }}
-                src={user.photoURL}
-                alt=""
-              />
-            ) : (
-              <img
-                style={{
-                  height: "45px",
-                  width: "45px",
-                  borderRadius: "50%",
-                  marginRight: "10px",
-                }}
-                src={profile}
-                alt=""
-              />
-            )}
-          </span>
-          <Box>
-            <Typography style={{ color: "black" }} variant="h6" noWrap component="div">
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <span>
+              {user.photoURL ? (
+                <img
+                  style={{
+                    height: "30px",
+                    width: "30px",
+                    borderRadius: "50%",
+                    marginRight: "10px",
+                  }}
+                  src={user.photoURL}
+                  alt=""
+                />
+              ) : (
+                <img
+                  style={{
+                    height: "30px",
+                    width: "30px",
+                    borderRadius: "50%",
+                    marginRight: "10px",
+                  }}
+                  src={profile}
+                  alt=""
+                />
+              )}
+            </span>
+            <Typography variant="p" noWrap component="div">
               {user.displayName}
             </Typography>
           </Box>
         </Toolbar>
       </AppBar>
-      <Box component="nav" sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }} aria-label="mailbox folders">
+      {/* Sidebar Start  */}
+      <Box
+        component="nav"
+        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        aria-label="mailbox folders"
+      >
         <Drawer
           container={container}
           variant="temporary"
@@ -216,8 +238,11 @@ function Dashboard(props) {
           {drawer}
         </Drawer>
       </Box>
+      {/* Sidebar End  */}
+      {/* Main Frame  */}
       <Box
         component="main"
+        style={{ minHeight: "100vh", backgroundColor: "rgb(255, 255, 255)" }}
         sx={{
           flexGrow: 1,
           p: 3,
@@ -225,18 +250,13 @@ function Dashboard(props) {
         }}
       >
         <Toolbar />
-
-        <Outlet />
+        <Outlet></Outlet>
       </Box>
     </Box>
   );
 }
 
 Dashboard.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 

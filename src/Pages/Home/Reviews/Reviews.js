@@ -58,11 +58,10 @@ const Reviews = () => {
     <Box sx={{ py: 12 }}>
       <Box className="text-center mx-auto mb-5">
         <Typography variant="h4" className="fw-bold">
-          {" "}
+         
           Customer's <span className="text-danger">Review</span>
         </Typography>
         <Typography className="text-muted">
-          {" "}
           Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero at tempus, <br /> blandit posuere ligula varius congue cursus
           porta feugiat
         </Typography>

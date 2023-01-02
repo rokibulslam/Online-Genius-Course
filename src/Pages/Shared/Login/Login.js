@@ -65,13 +65,13 @@ const Login = () => {
             <div>{authError && <Alert severity="warning">{authError}</Alert>}</div>
             <div className="d-flex justify-content-center links">
               Don't have an account?{" "}
-              <NavLink to="/register" className="text-decoration-none">
+              <NavLink to="/register" className="text-decoration-none text-white">
                 Sign up
               </NavLink>
             </div>
             <div className="d-flex justify-content-center">
-              <NavLink to="/register" className="text-decoration-none">
-                {" "}
+              <NavLink to="/register" className="text-decoration-none text-white">
+                
                 Forgot your password?
               </NavLink>
             </div>
