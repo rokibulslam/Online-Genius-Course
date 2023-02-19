@@ -9,10 +9,15 @@
 - `npm i`
 - `npm start`
 
-* It is about an online course selling website .
-* The Website is built with react js, node js, express js, material UI, firabase authentication etc .
-* If user is logged in, s/he can see the dashboard.
-* Customers can buy course , add review , manage their order and admin can manage courses, manage all orders.
+### Technology: React | Material-UI | Firebase | Axios | Nodejs | MongoDB | Expressjs | JIRA
+### Key Features & Achievements:
+### As part of a 4-person team, We contributed to the development of the website with the following features:
+* A responsive user interface that adapts to different screen sizes and devices
+* A login system that supports both traditional and Google sign-in methods
+* User capabilities such as the ability to create and delete courses, provide feedback via reviews, and view ordered items
+* Implementation of basic CRUD operations and state management using the Context API
+* Development of REST APIs using NodeJS, Express, and MongoDB
+
 
 ## Website Home Page
 
